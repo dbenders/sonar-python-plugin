@@ -1,0 +1,142 @@
+<!-- Sonar Python Plugin Extension for Sonar, open source software quality 
+  management tool. Copyright (C) 2011 Eriks Nukis mailto: eriks.nukis@gmail.com 
+  Sonar Python Plugin is free software; you can redistribute it and/or 
+  modify it under the terms of the GNU Lesser General Public License as published 
+  by the Free Software Foundation; either version 3 of the License, or (at 
+  your option) any later version. Sonar Python Plugin is distributed in 
+  the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the 
+  implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. 
+  See the GNU Lesser General Public License for more details. You should have 
+  received a copy of the GNU Lesser General Public License along with Sonar 
+  Python Plugin; if not, write to the Free Software Foundation, Inc., 51 
+  Franklin Street, Fifth Floor, Boston, MA 02 -->
+
+<rules>
+
+  <rule>
+    <key>C0301</key>
+    <name>Line too long</name>
+    <description><![CDATA[Used when a line is longer than a given number of characters.]]></description>
+  	<priority>MINOR</priority>
+  	<messages>
+  	  <message>Line too long ({a}/{b})</message>
+  	</messages>
+  	<inverse>false</inverse>
+  </rule>
+  
+  <rule>
+    <key>C0302</key>
+    <name>Too many lines in a module</name>
+    <description><![CDATA[Used when a module has too much lines, reducing its readability.]]></description>
+  	<priority>MINOR</priority>
+  	<messages>
+  	  <message>Too many lines in module {a}</message>
+  	</messages>
+  	<inverse>false</inverse>
+  </rule>
+
+  <rule>
+    <key>W0311</key><name>Bad indentation.</name>
+              <description><![CDATA[Used when an unexpected number of indentation\'s tabulations or 
+spaces has been found.]]></description>
+	<messages>
+		<message>Bad indentation. Found {a} {b}, expected {c}</message>
+	</messages>
+  	<priority>MINOR</priority>
+    <inverse>false</inverse>
+  </rule>
+  
+  <rule>
+    <key>W0312</key>
+    <name>Mixed tab/space indentation</name>
+    <messages>    
+    	<message>Found indentation with {a}s instead of {b}s</message>
+    </messages>
+    <description><![CDATA[Used when there are some mixed tabs and spaces in a module.]]></description>
+	<messages>
+		<message></message>
+	</messages>
+  	<priority>MINOR</priority>
+    <inverse>false</inverse>
+  </rule>
+  <rule>
+    <key>W0301</key><name>Unnecessary semicolon</name>
+              <description><![CDATA[Used when a statement is ended by a semi-colon (";"), which 
+              isn\'t necessary (that\'s python, not C ;).]]></description>
+	<messages>
+		<message>Unnecessary semicolon</message>
+	</messages>
+  	<priority>MINOR</priority>
+    <inverse>false</inverse>
+  </rule>
+  <rule>
+      <key>C0321</key><name>More than one statement on a single line</name>
+              <description><![CDATA[Used when more than on statement are found on the same line.]]></description>
+	<messages>
+		<message>More than one statement on a single line</message>
+	</messages>
+  	<priority>MINOR</priority>
+    <inverse>false</inverse>  
+  </rule>
+  <rule>
+    <key>C0322</key>
+    <name>Operator not preceded by a space</name>
+    <description><![CDATA[Used when one of the following operator (!= | <= | == | >= | < 
+| > | = | \+= | -= | \*= | /= | %) is not preceded by a space.]]></description>
+  	<priority>MINOR</priority>
+  	<messages>
+  	  <message>Operator not preceded by a space</message>
+  	</messages>
+    <inverse>false</inverse>
+  </rule>
+  <rule>
+      <key>C0323</key><name>Operator not followed by a space</name>
+              <description><![CDATA[Used when one of the following operator (!= | <= | == | >= | < 
+| > | = | \+= | -= | \*= | /= | %) is not followed by a space.]]></description>
+	<messages>
+		<message>Operator not followed by a space</message>
+	</messages>
+  	<priority>MINOR</priority>
+    <inverse>false</inverse>
+  </rule>
+  <rule>
+      <key>C0324</key><name>Comma not followed by a space</name>
+              <description><![CDATA[Used when a comma (",") is not followed by a space.]]></description>
+	<messages>
+		<message>Comma not followed by a space</message>
+	</messages>
+  	<priority>MINOR</priority>
+    <inverse>false</inverse>
+  </rule>
+  <rule>
+      <key>W0331</key><name>Use of the &lt;&gt; operator</name>
+              <description><![CDATA[Used when the deprecated "<>" operator is used instead
+of "!=".]]></description>
+	<messages>
+		<message>Use of the &lt;&gt; operator</message>
+	</messages>
+  	<priority>MINOR</priority>
+    <inverse>false</inverse>
+  </rule>
+  <rule>
+      <key>W0332</key><name>Use l as long integer identifier</name>
+              <description><![CDATA[Used when a lower case "l" is used to mark a long integer. You 
+should use a upper case "L" since the letter "l" looks too much 
+like the digit "1"]]></description>
+	<messages>
+		<message>Use l as long integer identifier</message>
+	</messages>
+  	<priority>MINOR</priority>
+    <inverse>false</inverse>
+  </rule>
+  <rule>
+      <key>W0333</key><name>Use of the `` operator</name>
+              <description><![CDATA[Used when the deprecated "``" (backtick) operator is used
+instead  of the str() function.]]></description>
+	<messages>
+		<message>Use of the `` operator</message>
+	</messages>
+  	<priority>MINOR</priority>
+    <inverse>false</inverse>
+  </rule>
+</rules>

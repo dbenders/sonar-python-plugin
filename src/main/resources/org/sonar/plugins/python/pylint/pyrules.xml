@@ -1,0 +1,58 @@
+<!-- Sonar Python Plugin Extension for Sonar, open source software quality 
+  management tool. Copyright (C) 2011 Eriks Nukis mailto: eriks.nukis@gmail.com 
+  Sonar Python Plugin is free software; you can redistribute it and/or 
+  modify it under the terms of the GNU Lesser General Public License as published 
+  by the Free Software Foundation; either version 3 of the License, or (at 
+  your option) any later version. Sonar Python Plugin is distributed in 
+  the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the 
+  implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. 
+  See the GNU Lesser General Public License for more details. You should have 
+  received a copy of the GNU Lesser General Public License along with Sonar 
+  Python Plugin; if not, write to the Free Software Foundation, Inc., 51 
+  Franklin Street, Fifth Floor, Boston, MA 02 -->
+
+<rules>
+
+  <rule>
+    <key>MAXLEN</key>
+    <name>Line too long.</name>
+    <description>
+      <![CDATA[Checks the maximum number of characters in a line.]]>
+    </description>
+    <priority>MINOR</priority>
+
+    <param>
+      <key>MAXLEN</key>
+      <description>Maximum line length</description>
+      <defaultValue>80</defaultValue>
+    </param>
+    <messages>
+      <message>Line too long ({a}/{b})</message>
+    </messages>
+  </rule>
+  
+  <rule>
+    <key>MISSING_DOCSTRING</key>
+    <name>Missing docstring</name>
+    <description>
+      <![CDATA[]]>
+    </description>
+    <priority>MINOR</priority>
+    <messages>
+      <message>Missing docstring</message>
+    </messages>
+  </rule>
+
+  <rule>
+    <key>NO_SPACE_BEFORE_OP</key>
+    <name>Operator not preceded by a space</name>
+    <description>
+      <![CDATA[]]>
+    </description>
+    <priority>MINOR</priority>
+    <messages>
+      <message>Operator not preceded by a space</message>
+    </messages>
+  </rule>
+  
+</rules>

@@ -1,0 +1,1073 @@
+<!-- Sonar Python Plugin Extension for Sonar, open source software quality 
+  management tool. Copyright (C) 2011 Eriks Nukis mailto: eriks.nukis@gmail.com 
+  Sonar Python Plugin is free software; you can redistribute it and/or 
+  modify it under the terms of the GNU Lesser General Public License as published 
+  by the Free Software Foundation; either version 3 of the License, or (at 
+  your option) any later version. Sonar Python Plugin is distributed in 
+  the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the 
+  implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. 
+  See the GNU Lesser General Public License for more details. You should have 
+  received a copy of the GNU Lesser General Public License along with Sonar 
+  Python Plugin; if not, write to the Free Software Foundation, Inc., 51 
+  Franklin Street, Fifth Floor, Boston, MA 02 -->
+
+<rules>
+<rule>
+  <key>E0202</key>
+  <name>An attribute inherited from {a} hide this method</name>
+  <description><![CDATA[Used when a class defines a method which is hidden by an               instance attribute from an ancestor class.]]></description>
+  <messages>
+    <message>An attribute inherited from {a} hide this method</message>
+  </messages>
+  <priority>MAJOR</priority>
+  <inverse>false</inverse>
+</rule>
+<rule>
+  <key>E0203</key>
+  <name>Access to member {a} before its definition line {b}</name>
+  <description><![CDATA[Used when an instance member is accessed before it's actually              assigned.]]></description>
+  <messages>
+    <message>Access to member {a} before its definition line {b}</message>
+  </messages>
+  <priority>MAJOR</priority>
+  <inverse>false</inverse>
+</rule>
+<rule>
+  <key>E0213</key>
+  <name>Method should have "self" as first argument</name>
+  <description><![CDATA[Used when a method has an attribute different the "self" as              first argument. This is considered as an error since this is              a so common convention that you shouldn't break it!]]></description>
+  <messages>
+    <message>Method should have "self" as first argument</message>
+  </messages>
+  <priority>MAJOR</priority>
+  <inverse>false</inverse>
+</rule>
+<rule>
+  <key>W0232</key>
+  <name>Class has no __init__ method</name>
+  <description><![CDATA[Used when a class has no __init__ method, neither its parent               classes.]]></description>
+  <messages>
+    <message>Class has no __init__ method</message>
+  </messages>
+  <priority>MINOR</priority>
+  <inverse>false</inverse>
+</rule>
+<rule>
+  <key>R0201</key>
+  <name>Method could be a function</name>
+  <description><![CDATA[Used when a method doesn't use its bound instance, and so could              be written as a function.]]></description>
+  <messages>
+    <message>Method could be a function</message>
+  </messages>
+  <priority>MINOR</priority>
+  <inverse>false</inverse>
+</rule>
+<rule>
+  <key>C0202</key>
+  <name>Class method should have "cls" as first argument</name>
+  <description><![CDATA[Used when a class method has an attribute different than "cls"              as first argument, to easily differentiate them from regular               instance methods.]]></description>
+  <messages>
+    <message>Class method should have "cls" as first argument</message>
+  </messages>
+  <priority>INFO</priority>
+  <inverse>false</inverse>
+</rule>
+<rule>
+  <key>C0203</key>
+  <name>Metaclass method should have "mcs" as first argument</name>
+  <description><![CDATA[Used when a metaclass method has an attribute different the               "mcs" as first argument.]]></description>
+  <messages>
+    <message>Metaclass method should have "mcs" as first argument</message>
+  </messages>
+  <priority>INFO</priority>
+  <inverse>false</inverse>
+</rule>
+<rule>
+  <key>W0222</key>
+  <name>Signature differs from {a} method</name>
+  <description><![CDATA[Used when a method signature is different than in the               implemented interface or in an overridden method.]]></description>
+  <messages>
+    <message>Signature differs from {a} method</message>
+  </messages>
+  <priority>MINOR</priority>
+  <inverse>false</inverse>
+</rule>
+<rule>
+  <key>E0211</key>
+  <name>Method has no argument</name>
+  <description><![CDATA[Used when a method which should have the bound instance as               first argument has no argument defined.]]></description>
+  <messages>
+    <message>Method has no argument</message>
+  </messages>
+  <priority>MAJOR</priority>
+  <inverse>false</inverse>
+</rule>
+<rule>
+  <key>E0222</key>
+  <name>Missing method {a} from {b} interface</name>
+  <description><![CDATA[Used when a method declared in an interface is missing from a               class implementing this interface]]></description>
+  <messages>
+    <message>Missing method {a} from {b} interface</message>
+  </messages>
+  <priority>MAJOR</priority>
+  <inverse>false</inverse>
+</rule>
+<rule>
+  <key>W0221</key>
+  <name>Arguments number differs from {a} method</name>
+  <description><![CDATA[Used when a method has a different number of arguments than in               the implemented interface or in an overridden method.]]></description>
+  <messages>
+    <message>Arguments number differs from {a} method</message>
+  </messages>
+  <priority>MINOR</priority>
+  <inverse>false</inverse>
+</rule>
+<rule>
+  <key>W0223</key>
+  <name>Method {a} is abstract in class {b} but is not overridden</name>
+  <description><![CDATA[Used when an abstract method (i.e. raise NotImplementedError) is               not overridden in concrete class.]]></description>
+  <messages>
+    <message>Method {a} is abstract in class {b} but is not overridden</message>
+  </messages>
+  <priority>MINOR</priority>
+  <inverse>false</inverse>
+</rule>
+<rule>
+  <key>W0201</key>
+  <name>Attribute {a} defined outside __init__</name>
+  <description><![CDATA[Used when an instance attribute is defined outside the __init__              method.]]></description>
+  <messages>
+    <message>Attribute {a} defined outside __init__</message>
+  </messages>
+  <priority>MINOR</priority>
+  <inverse>false</inverse>
+</rule>
+<rule>
+  <key>W0231</key>
+  <name>__init__ method from base class {a} is not called</name>
+  <description><![CDATA[Used when an ancestor class method has an __init__ method               which is not called by a derived class.]]></description>
+  <messages>
+    <message>__init__ method from base class {a} is not called</message>
+  </messages>
+  <priority>MINOR</priority>
+  <inverse>false</inverse>
+</rule>
+<rule>
+  <key>F0202</key>
+  <name>Unable to check methods signature ({a} / {b})</name>
+  <description><![CDATA[Used when PyLint has been unable to check methods signature               compatibility for an unexpected reason. Please report this kind               if you don't make sense of it.]]></description>
+  <messages>
+    <message>Unable to check methods signature ({a} / {b})</message>
+  </messages>
+  <priority>INFO</priority>
+  <inverse>false</inverse>
+</rule>
+<rule>
+  <key>W0212</key>
+  <name>Access to a protected member {a} of a client class</name>
+  <description><![CDATA[Used when a protected member (i.e. class member with a name               beginning with an underscore) is access outside the class or a               descendant of the class where it's defined.]]></description>
+  <messages>
+    <message>Access to a protected member {a} of a client class</message>
+  </messages>
+  <priority>MINOR</priority>
+  <inverse>false</inverse>
+</rule>
+<rule>
+  <key>W0211</key>
+  <name>Static method with {a} as first argument</name>
+  <description><![CDATA[Used when a static method has "self" or "cls" as first argument.]]></description>
+  <messages>
+    <message>Static method with {a} as first argument</message>
+  </messages>
+  <priority>MINOR</priority>
+  <inverse>false</inverse>
+</rule>
+<rule>
+  <key>E0221</key>
+  <name>Interface resolved to {a} is not a class</name>
+  <description><![CDATA[Used when a class claims to implement an interface which is not               a class.]]></description>
+  <messages>
+    <message>Interface resolved to {a} is not a class</message>
+  </messages>
+  <priority>MAJOR</priority>
+  <inverse>false</inverse>
+</rule>
+<rule>
+  <key>W0233</key>
+  <name>__init__ method from a non direct base class {a} is called</name>
+  <description><![CDATA[Used when an __init__ method is called on a class which is not               in the direct ancestors for the analysed class.]]></description>
+  <messages>
+    <message>__init__ method from a non direct base class {a} is called</message>
+  </messages>
+  <priority>MINOR</priority>
+  <inverse>false</inverse>
+</rule>
+<rule>
+  <key>F0220</key>
+  <name>failed to resolve interfaces implemented by {a} ({b})</name>
+  <description><![CDATA[Used when a PyLint as failed to find interfaces implemented by                a class]]></description>
+  <messages>
+    <message>failed to resolve interfaces implemented by {a} ({b})</message>
+  </messages>
+  <priority>INFO</priority>
+  <inverse>false</inverse>
+</rule>
+<rule>
+  <key>R0911</key>
+  <name>Too many return statements ({a}/{b})</name>
+  <description><![CDATA[Used when a function or method has too many return statement,               making it hard to follow.]]></description>
+  <messages>
+    <message>Too many return statements ({a}/{b})</message>
+  </messages>
+  <priority>MINOR</priority>
+  <inverse>false</inverse>
+</rule>
+<rule>
+  <key>R0915</key>
+  <name>Too many statements ({a}/{b})</name>
+  <description><![CDATA[Used when a function or method has too many statements. You               should then split it in smaller functions / methods.]]></description>
+  <messages>
+    <message>Too many statements ({a}/{b})</message>
+  </messages>
+  <priority>MINOR</priority>
+  <inverse>false</inverse>
+</rule>
+<rule>
+  <key>R0914</key>
+  <name>Too many local variables ({a}/{b})</name>
+  <description><![CDATA[Used when a function or method has too many local variables.]]></description>
+  <messages>
+    <message>Too many local variables ({a}/{b})</message>
+  </messages>
+  <priority>MINOR</priority>
+  <inverse>false</inverse>
+</rule>
+<rule>
+  <key>R0904</key>
+  <name>Too many public methods ({a}/{b})</name>
+  <description><![CDATA[Used when class has too many public methods, try to reduce               this to get a more simple (and so easier to use) class.]]></description>
+  <messages>
+    <message>Too many public methods ({a}/{b})</message>
+  </messages>
+  <priority>MINOR</priority>
+  <inverse>false</inverse>
+</rule>
+<rule>
+  <key>R0902</key>
+  <name>Too many instance attributes ({a}/{b})</name>
+  <description><![CDATA[Used when class has too many instance attributes, try to reduce               this to get a more simple (and so easier to use) class.]]></description>
+  <messages>
+    <message>Too many instance attributes ({a}/{b})</message>
+  </messages>
+  <priority>MINOR</priority>
+  <inverse>false</inverse>
+</rule>
+<rule>
+  <key>R0903</key>
+  <name>Too few public methods ({a}/{b})</name>
+  <description><![CDATA[Used when class has too few public methods, so be sure it's               really worth it.]]></description>
+  <messages>
+    <message>Too few public methods ({a}/{b})</message>
+  </messages>
+  <priority>MINOR</priority>
+  <inverse>false</inverse>
+</rule>
+<rule>
+  <key>R0913</key>
+  <name>Too many arguments ({a}/{b})</name>
+  <description><![CDATA[Used when a function or method takes too many arguments.]]></description>
+  <messages>
+    <message>Too many arguments ({a}/{b})</message>
+  </messages>
+  <priority>MINOR</priority>
+  <inverse>false</inverse>
+</rule>
+<rule>
+  <key>R0901</key>
+  <name>Too many ancestors ({a}/{b})</name>
+  <description><![CDATA[Used when class has too many parent classes, try to reduce               this to get a more simple (and so easier to use) class.]]></description>
+  <messages>
+    <message>Too many ancestors ({a}/{b})</message>
+  </messages>
+  <priority>MINOR</priority>
+  <inverse>false</inverse>
+</rule>
+<rule>
+  <key>R0912</key>
+  <name>Too many branches ({a}/{b})</name>
+  <description><![CDATA[Used when a function or method has too many branches,               making it hard to follow.]]></description>
+  <messages>
+    <message>Too many branches ({a}/{b})</message>
+  </messages>
+  <priority>MINOR</priority>
+  <inverse>false</inverse>
+</rule>
+<rule>
+  <key>R0921</key>
+  <name>Abstract class not referenced</name>
+  <description><![CDATA[Used when an abstract class is not used as ancestor anywhere.]]></description>
+  <messages>
+    <message>Abstract class not referenced</message>
+  </messages>
+  <priority>MINOR</priority>
+  <inverse>false</inverse>
+</rule>
+<rule>
+  <key>R0922</key>
+  <name>Abstract class is only referenced {a} times</name>
+  <description><![CDATA[Used when an abstract class is used less than X times as               ancestor.]]></description>
+  <messages>
+    <message>Abstract class is only referenced {a} times</message>
+  </messages>
+  <priority>MINOR</priority>
+  <inverse>false</inverse>
+</rule>
+<rule>
+  <key>R0923</key>
+  <name>Interface not implemented</name>
+  <description><![CDATA[Used when an interface class is not implemented anywhere.]]></description>
+  <messages>
+    <message>Interface not implemented</message>
+  </messages>
+  <priority>MINOR</priority>
+  <inverse>false</inverse>
+</rule>
+<rule>
+  <key>W0710</key>
+  <name>Exception doesn't inherit from standard "Exception" class</name>
+  <description><![CDATA[Used when a custom exception class is raised but doesn't               inherit from the builtin "Exception" class.]]></description>
+  <messages>
+    <message>Exception doesn't inherit from standard "Exception" class</message>
+  </messages>
+  <priority>MINOR</priority>
+  <inverse>false</inverse>
+</rule>
+<rule>
+  <key>W0703</key>
+  <name>Catch "Exception"</name>
+  <description><![CDATA[Used when an except catches Exception instances.]]></description>
+  <messages>
+    <message>Catch "Exception"</message>
+  </messages>
+  <priority>MINOR</priority>
+  <inverse>false</inverse>
+</rule>
+<rule>
+  <key>W0704</key>
+  <name>Except doesn't do anything</name>
+  <description><![CDATA[Used when an except clause does nothing but "pass" and there is              no "else" clause.]]></description>
+  <messages>
+    <message>Except doesn't do anything</message>
+  </messages>
+  <priority>MINOR</priority>
+  <inverse>false</inverse>
+</rule>
+<rule>
+  <key>E0710</key>
+  <name>Raising a new style class which doesn't inherit from BaseException</name>
+  <description><![CDATA[Used when a new style class which doesn't inherit from                BaseException is raised.]]></description>
+  <messages>
+    <message>Raising a new style class which doesn't inherit from BaseException</message>
+  </messages>
+  <priority>MAJOR</priority>
+  <inverse>false</inverse>
+</rule>
+<rule>
+  <key>E0711</key>
+  <name>NotImplemented raised - should raise NotImplementedError</name>
+  <description><![CDATA[Used when NotImplemented is raised instead of               NotImplementedError]]></description>
+  <messages>
+    <message>NotImplemented raised - should raise NotImplementedError</message>
+  </messages>
+  <priority>MAJOR</priority>
+  <inverse>false</inverse>
+</rule>
+<rule>
+  <key>W0701</key>
+  <name>Raising a string exception</name>
+  <description><![CDATA[Used when a string exception is raised.]]></description>
+  <messages>
+    <message>Raising a string exception</message>
+  </messages>
+  <priority>MINOR</priority>
+  <inverse>false</inverse>
+</rule>
+<rule>
+  <key>E0702</key>
+  <name>Raising {a} while only classes, instances or string are allowed</name>
+  <description><![CDATA[Used when something which is neither a class, an instance or a               string is raised (i.e. a `TypeError` will be raised).]]></description>
+  <messages>
+    <message>Raising {a} while only classes, instances or string are allowed</message>
+  </messages>
+  <priority>MAJOR</priority>
+  <inverse>false</inverse>
+</rule>
+<rule>
+  <key>E0701</key>
+  <name>Bad except clauses order ({a})</name>
+  <description><![CDATA[Used when except clauses are not in the correct order (from the     more specific to the more generic). If you don't fix the order,     some exceptions may not be catched by the most specific handler.]]></description>
+  <messages>
+    <message>Bad except clauses order ({a})</message>
+  </messages>
+  <priority>MAJOR</priority>
+  <inverse>false</inverse>
+</rule>
+<rule>
+  <key>W0702</key>
+  <name>No exception type(s) specified</name>
+  <description><![CDATA[Used when an except clause doesn't specify exceptions type to               catch.]]></description>
+  <messages>
+    <message>No exception type(s) specified</message>
+  </messages>
+  <priority>MINOR</priority>
+  <inverse>false</inverse>
+</rule>
+<rule>
+  <key>W0331</key>
+  <name>Use of the &lt;&gt; operator</name>
+  <description><![CDATA[Used when the deprecated "<>" operator is used instead               of "!=".]]></description>
+  <messages>
+    <message>Use of the &lt;&gt; operator</message>
+  </messages>
+  <priority>MINOR</priority>
+  <inverse>false</inverse>
+</rule>
+<rule>
+  <key>W0301</key>
+  <name>Unnecessary semicolon</name>
+  <description><![CDATA[Used when a statement is ended by a semi-colon (";"), which               isn't necessary (that's python, not C ;).]]></description>
+  <messages>
+    <message>Unnecessary semicolon</message>
+  </messages>
+  <priority>MINOR</priority>
+  <inverse>false</inverse>
+</rule>
+<rule>
+  <key>W0311</key>
+  <name>Bad indentation. Found {a} {b}, expected {c}</name>
+  <description><![CDATA[Used when an unexpected number of indentation's tabulations or spaces has been found.]]></description>
+  <messages>
+    <message>Bad indentation. Found {a} {b}, expected {c}</message>
+  </messages>
+  <priority>MINOR</priority>
+  <inverse>false</inverse>
+</rule>
+<rule>
+  <key>W0312</key>
+  <name>Found indentation with {a}s instead of {a}s</name>
+  <description><![CDATA[Used when there are some mixed tabs and spaces in a module.]]></description>
+  <messages>
+    <message>Found indentation with {a}s instead of {a}s</message>
+  </messages>
+  <priority>MINOR</priority>
+  <inverse>false</inverse>
+</rule>
+<rule>
+  <key>W0332</key>
+  <name>Use l as long integer identifier</name>
+  <description><![CDATA[Used when a lower case "l" is used to mark a long integer. You should use a upper case "L" since the letter "l" looks too much like the digit "1"]]></description>
+  <messages>
+    <message>Use l as long integer identifier</message>
+  </messages>
+  <priority>MINOR</priority>
+  <inverse>false</inverse>
+</rule>
+<rule>
+  <key>W0333</key>
+  <name>Use of the `` operator</name>
+  <description><![CDATA[Used when the deprecated "``" (backtick) operator is used instead  of the str() function.]]></description>
+  <messages>
+    <message>Use of the `` operator</message>
+  </messages>
+  <priority>MINOR</priority>
+  <inverse>false</inverse>
+</rule>
+<rule>
+  <key>C0323</key>
+  <name>Operator not followed by a space
+{a}</name>
+  <description><![CDATA[Used when one of the following operator (!= | <= | == | >= | < | > | = | \+= | -= | \*= | /= | {a} is not followed by a space.]]></description>
+  <messages>
+    <message>Operator not followed by a space
+{a}</message>
+  </messages>
+  <priority>INFO</priority>
+  <inverse>false</inverse>
+</rule>
+<rule>
+  <key>C0322</key>
+  <name>Operator not preceded by a space
+{a}</name>
+  <description><![CDATA[Used when one of the following operator (!= | <= | == | >= | < | > | = | \+= | -= | \*= | /= | {a} is not preceded by a space.]]></description>
+  <messages>
+    <message>Operator not preceded by a space
+{a}</message>
+  </messages>
+  <priority>INFO</priority>
+  <inverse>false</inverse>
+</rule>
+<rule>
+  <key>C0321</key>
+  <name>More than one statement on a single line</name>
+  <description><![CDATA[Used when more than on statement are found on the same line.]]></description>
+  <messages>
+    <message>More than one statement on a single line</message>
+  </messages>
+  <priority>INFO</priority>
+  <inverse>false</inverse>
+</rule>
+<rule>
+  <key>C0302</key>
+  <name>Too many lines in module ({a})</name>
+  <description><![CDATA[Used when a module has too much lines, reducing its readability.]]></description>
+  <messages>
+    <message>Too many lines in module ({a})</message>
+  </messages>
+  <priority>INFO</priority>
+  <inverse>false</inverse>
+</rule>
+<rule>
+  <key>C0301</key>
+  <name>Line too long ({a}/{a})</name>
+  <description><![CDATA[Used when a line is longer than a given number of characters.]]></description>
+  <messages>
+    <message>Line too long ({a}/{a})</message>
+  </messages>
+  <priority>INFO</priority>
+  <inverse>false</inverse>
+</rule>
+<rule>
+  <key>C0324</key>
+  <name>Comma not followed by a space
+{a}</name>
+  <description><![CDATA[Used when a comma (",") is not followed by a space.]]></description>
+  <messages>
+    <message>Comma not followed by a space
+{a}</message>
+  </messages>
+  <priority>INFO</priority>
+  <inverse>false</inverse>
+</rule>
+<rule>
+  <key>W0406</key>
+  <name>Module import itself</name>
+  <description><![CDATA[Used when a module is importing itself.]]></description>
+  <messages>
+    <message>Module import itself</message>
+  </messages>
+  <priority>MINOR</priority>
+  <inverse>false</inverse>
+</rule>
+<rule>
+  <key>R0401</key>
+  <name>Cyclic import ({a})</name>
+  <description><![CDATA[Used when a cyclic import between two or more modules is               detected.]]></description>
+  <messages>
+    <message>Cyclic import ({a})</message>
+  </messages>
+  <priority>MINOR</priority>
+  <inverse>false</inverse>
+</rule>
+<rule>
+  <key>W0402</key>
+  <name>Uses of a deprecated module {a}</name>
+  <description><![CDATA[Used a module marked as deprecated is imported.]]></description>
+  <messages>
+    <message>Uses of a deprecated module {a}</message>
+  </messages>
+  <priority>MINOR</priority>
+  <inverse>false</inverse>
+</rule>
+<rule>
+  <key>W0403</key>
+  <name>Relative import {a}, should be {a}</name>
+  <description><![CDATA[Used when an import relative to the package directory is               detected.]]></description>
+  <messages>
+    <message>Relative import {a}, should be {a}</message>
+  </messages>
+  <priority>MINOR</priority>
+  <inverse>false</inverse>
+</rule>
+<rule>
+  <key>F0401</key>
+  <name>Unable to import {a}</name>
+  <description><![CDATA[Used when pylint has been unable to import a module.]]></description>
+  <messages>
+    <message>Unable to import {a}</message>
+  </messages>
+  <priority>INFO</priority>
+  <inverse>false</inverse>
+</rule>
+<rule>
+  <key>W0401</key>
+  <name>Wildcard import {a}</name>
+  <description><![CDATA[Used when `from module import *` is detected.]]></description>
+  <messages>
+    <message>Wildcard import {a}</message>
+  </messages>
+  <priority>MINOR</priority>
+  <inverse>false</inverse>
+</rule>
+<rule>
+  <key>W0404</key>
+  <name>Reimport {a} (imported line {a})</name>
+  <description><![CDATA[Used when a module is reimported multiple times.]]></description>
+  <messages>
+    <message>Reimport {a} (imported line {a})</message>
+  </messages>
+  <priority>MINOR</priority>
+  <inverse>false</inverse>
+</rule>
+<rule>
+  <key>W0410</key>
+  <name>__future__ import is not the first non docstring statement</name>
+  <description><![CDATA[Python 2.5 and greater require __future__ import to be the               first non docstring statement in the module.]]></description>
+  <messages>
+    <message>__future__ import is not the first non docstring statement</message>
+  </messages>
+  <priority>MINOR</priority>
+  <inverse>false</inverse>
+</rule>
+<rule>
+  <key>E1205</key>
+  <name>Too many arguments for logging format string</name>
+  <description><![CDATA[Used when a logging format string is given too few arguments.]]></description>
+  <messages>
+    <message>Too many arguments for logging format string</message>
+  </messages>
+  <priority>MAJOR</priority>
+  <inverse>false</inverse>
+</rule>
+<rule>
+  <key>W1201</key>
+  <name>Specify string format arguments as logging function parameters</name>
+  <description><![CDATA[Used when a logging statement has a call form of "logging.<logging method>(format_string {a}(format_args...))". Such calls should leave string interpolation to the logging method itself and be written "logging.<logging method>(format_string, format_args...)" so that the program may avoid incurring the cost of the interpolation in those cases in which no message will be logged. For more, see http://www.python.org/dev/peps/pep-0282/.]]></description>
+  <messages>
+    <message>Specify string format arguments as logging function parameters</message>
+  </messages>
+  <priority>MINOR</priority>
+  <inverse>false</inverse>
+</rule>
+<rule>
+  <key>E1206</key>
+  <name>Not enough arguments for logging format string</name>
+  <description><![CDATA[Used when a logging format string is given too many arguments]]></description>
+  <messages>
+    <message>Not enough arguments for logging format string</message>
+  </messages>
+  <priority>MAJOR</priority>
+  <inverse>false</inverse>
+</rule>
+<rule>
+  <key>E1201</key>
+  <name>Logging format string ends in middle of conversion specifier</name>
+  <description><![CDATA[Used when a logging statement format string terminates before              the end of a conversion specifier.]]></description>
+  <messages>
+    <message>Logging format string ends in middle of conversion specifier</message>
+  </messages>
+  <priority>MAJOR</priority>
+  <inverse>false</inverse>
+</rule>
+<rule>
+  <key>E1200</key>
+  <name>Unsupported logging format character {a} ({a}02x) at index {a}</name>
+  <description><![CDATA[Used when an unsupported format character is used in a logging              statement format string.]]></description>
+  <messages>
+    <message>Unsupported logging format character {a} ({a}02x) at index {a}</message>
+  </messages>
+  <priority>MAJOR</priority>
+  <inverse>false</inverse>
+</rule>
+<rule>
+  <key>W0511</key>
+  <name>{a}</name>
+  <description><![CDATA[Used when a warning note as FIXME or XXX is detected.]]></description>
+  <messages>
+    <message>{a}</message>
+  </messages>
+  <priority>MINOR</priority>
+  <inverse>false</inverse>
+</rule>
+<rule>
+  <key>W1001</key>
+  <name>Use of "property" on an old style class</name>
+  <description><![CDATA[Used when PyLint detect the use of the builtin "property"               on an old style class while this is relying on new style               classes features]]></description>
+  <messages>
+    <message>Use of "property" on an old style class</message>
+  </messages>
+  <priority>MINOR</priority>
+  <inverse>false</inverse>
+</rule>
+<rule>
+  <key>E1003</key>
+  <name>Bad first argument {a} given to super class</name>
+  <description><![CDATA[Used when another argument than the current class is given as               first argument of the super builtin.]]></description>
+  <messages>
+    <message>Bad first argument {a} given to super class</message>
+  </messages>
+  <priority>MAJOR</priority>
+  <inverse>false</inverse>
+</rule>
+<rule>
+  <key>E1002</key>
+  <name>Use super on an old style class</name>
+  <description><![CDATA[Used when an old style class use the super builtin.]]></description>
+  <messages>
+    <message>Use super on an old style class</message>
+  </messages>
+  <priority>MAJOR</priority>
+  <inverse>false</inverse>
+</rule>
+<rule>
+  <key>E1001</key>
+  <name>Use __slots__ on an old style class</name>
+  <description><![CDATA[Used when an old style class use the __slots__ attribute.]]></description>
+  <messages>
+    <message>Use __slots__ on an old style class</message>
+  </messages>
+  <priority>MAJOR</priority>
+  <inverse>false</inverse>
+</rule>
+<rule>
+  <key>R0801</key>
+  <name>Similar lines in {a} files
+{a}</name>
+  <description><![CDATA[Indicates that a set of similar lines has been detected                   among multiple file. This usually means that the code should                   be refactored to avoid this duplication.]]></description>
+  <messages>
+    <message>Similar lines in {a} files
+{a}</message>
+  </messages>
+  <priority>MINOR</priority>
+  <inverse>false</inverse>
+</rule>
+<rule>
+  <key>E1304</key>
+  <name>Missing key {a} in format string dictionary</name>
+  <description><![CDATA[Used when a format string that uses named conversion specifiers               is used with a dictionary that doesn't contain all the keys               required by the format string.]]></description>
+  <messages>
+    <message>Missing key {a} in format string dictionary</message>
+  </messages>
+  <priority>MAJOR</priority>
+  <inverse>false</inverse>
+</rule>
+<rule>
+  <key>E1305</key>
+  <name>Too many arguments for format string</name>
+  <description><![CDATA[Used when a format string that uses unnamed conversion               specifiers is given too few arguments.]]></description>
+  <messages>
+    <message>Too many arguments for format string</message>
+  </messages>
+  <priority>MAJOR</priority>
+  <inverse>false</inverse>
+</rule>
+<rule>
+  <key>W1300</key>
+  <name>Format string dictionary key should be a string, not {a}</name>
+  <description><![CDATA[Used when a format string that uses named conversion specifiers               is used with a dictionary whose keys are not all strings.]]></description>
+  <messages>
+    <message>Format string dictionary key should be a string, not {a}</message>
+  </messages>
+  <priority>MINOR</priority>
+  <inverse>false</inverse>
+</rule>
+<rule>
+  <key>W1301</key>
+  <name>Unused key {a} in format string dictionary</name>
+  <description><![CDATA[Used when a format string that uses named conversion specifiers               is used with a dictionary that conWtains keys not required by the               format string.]]></description>
+  <messages>
+    <message>Unused key {a} in format string dictionary</message>
+  </messages>
+  <priority>MINOR</priority>
+  <inverse>false</inverse>
+</rule>
+<rule>
+  <key>E1300</key>
+  <name>Unsupported format character {a} ({a}02x) at index {a}</name>
+  <description><![CDATA[Used when a unsupported format character is used in a format              string.]]></description>
+  <messages>
+    <message>Unsupported format character {a} ({a}02x) at index {a}</message>
+  </messages>
+  <priority>MAJOR</priority>
+  <inverse>false</inverse>
+</rule>
+<rule>
+  <key>E1301</key>
+  <name>Format string ends in middle of conversion specifier</name>
+  <description><![CDATA[Used when a format string terminates before the end of a               conversion specifier.]]></description>
+  <messages>
+    <message>Format string ends in middle of conversion specifier</message>
+  </messages>
+  <priority>MAJOR</priority>
+  <inverse>false</inverse>
+</rule>
+<rule>
+  <key>E1302</key>
+  <name>Mixing named and unnamed conversion specifiers in format string</name>
+  <description><![CDATA[Used when a format string contains both named (e.g. '{a}foo)d')               and unnamed (e.g. '{a}') conversion specifiers.  This is also               used when a named conversion specifier contains * for the               minimum field width and/or precision.]]></description>
+  <messages>
+    <message>Mixing named and unnamed conversion specifiers in format string</message>
+  </messages>
+  <priority>MAJOR</priority>
+  <inverse>false</inverse>
+</rule>
+<rule>
+  <key>E1303</key>
+  <name>Expected mapping for format string, not {a}</name>
+  <description><![CDATA[Used when a format string that uses named conversion specifiers               is used with an argument that is not a mapping.]]></description>
+  <messages>
+    <message>Expected mapping for format string, not {a}</message>
+  </messages>
+  <priority>MAJOR</priority>
+  <inverse>false</inverse>
+</rule>
+<rule>
+  <key>E1306</key>
+  <name>Not enough arguments for format string</name>
+  <description><![CDATA[Used when a format string that uses unnamed conversion               specifiers is given too many arguments]]></description>
+  <messages>
+    <message>Not enough arguments for format string</message>
+  </messages>
+  <priority>MAJOR</priority>
+  <inverse>false</inverse>
+</rule>
+<rule>
+  <key>E1102</key>
+  <name>{a} is not callable</name>
+  <description><![CDATA[Used when an object being called has been inferred to a non               callable object]]></description>
+  <messages>
+    <message>{a} is not callable</message>
+  </messages>
+  <priority>MAJOR</priority>
+  <inverse>false</inverse>
+</rule>
+<rule>
+  <key>E1103</key>
+  <name>{a} {a} has no {a} member (but some types could not be inferred)</name>
+  <description><![CDATA[Used when a variable is accessed for an unexistent member, but               astng was not able to interpret all possible types of this               variable.]]></description>
+  <messages>
+    <message>{a} {a} has no {a} member (but some types could not be inferred)</message>
+  </messages>
+  <priority>MAJOR</priority>
+  <inverse>false</inverse>
+</rule>
+<rule>
+  <key>W1111</key>
+  <name>Assigning to function call which only returns None</name>
+  <description><![CDATA[Used when an assignment is done on a function call but the               inferred function returns nothing but None.]]></description>
+  <messages>
+    <message>Assigning to function call which only returns None</message>
+  </messages>
+  <priority>MINOR</priority>
+  <inverse>false</inverse>
+</rule>
+<rule>
+  <key>E1101</key>
+  <name>{a} {a} has no {a} member</name>
+  <description><![CDATA[Used when a variable is accessed for an unexistent member.]]></description>
+  <messages>
+    <message>{a} {a} has no {a} member</message>
+  </messages>
+  <priority>MAJOR</priority>
+  <inverse>false</inverse>
+</rule>
+<rule>
+  <key>E1124</key>
+  <name>Multiple values passed for parameter {a} in function call</name>
+  <description><![CDATA[Used when a function call would result in assigning multiple               values to a function parameter, one value from a positional               argument and one from a keyword argument.]]></description>
+  <messages>
+    <message>Multiple values passed for parameter {a} in function call</message>
+  </messages>
+  <priority>MAJOR</priority>
+  <inverse>false</inverse>
+</rule>
+<rule>
+  <key>E1111</key>
+  <name>Assigning to function call which doesn't return</name>
+  <description><![CDATA[Used when an assignment is done on a function call but the               inferred function doesn't return anything.]]></description>
+  <messages>
+    <message>Assigning to function call which doesn't return</message>
+  </messages>
+  <priority>MAJOR</priority>
+  <inverse>false</inverse>
+</rule>
+<rule>
+  <key>E1120</key>
+  <name>No value passed for parameter {a} in function call</name>
+  <description><![CDATA[Used when a function call passes too few arguments.]]></description>
+  <messages>
+    <message>No value passed for parameter {a} in function call</message>
+  </messages>
+  <priority>MAJOR</priority>
+  <inverse>false</inverse>
+</rule>
+<rule>
+  <key>E1121</key>
+  <name>Too many positional arguments for function call</name>
+  <description><![CDATA[Used when a function call passes too many positional               arguments.]]></description>
+  <messages>
+    <message>Too many positional arguments for function call</message>
+  </messages>
+  <priority>MAJOR</priority>
+  <inverse>false</inverse>
+</rule>
+<rule>
+  <key>E1122</key>
+  <name>Duplicate keyword argument {a} in function call</name>
+  <description><![CDATA[Used when a function call passes the same keyword argument               multiple times.]]></description>
+  <messages>
+    <message>Duplicate keyword argument {a} in function call</message>
+  </messages>
+  <priority>MAJOR</priority>
+  <inverse>false</inverse>
+</rule>
+<rule>
+  <key>E1123</key>
+  <name>Passing unexpected keyword argument {a} in function call</name>
+  <description><![CDATA[Used when a function call passes a keyword argument that               doesn't correspond to one of the function's parameter names.]]></description>
+  <messages>
+    <message>Passing unexpected keyword argument {a} in function call</message>
+  </messages>
+  <priority>MAJOR</priority>
+  <inverse>false</inverse>
+</rule>
+<rule>
+  <key>E0602</key>
+  <name>Undefined variable {a}</name>
+  <description><![CDATA[Used when an undefined variable is accessed.]]></description>
+  <messages>
+    <message>Undefined variable {a}</message>
+  </messages>
+  <priority>MAJOR</priority>
+  <inverse>false</inverse>
+</rule>
+<rule>
+  <key>E0601</key>
+  <name>Using variable {a} before assignment</name>
+  <description><![CDATA[Used when a local variable is accessed before it's               assignment.]]></description>
+  <messages>
+    <message>Using variable {a} before assignment</message>
+  </messages>
+  <priority>MAJOR</priority>
+  <inverse>false</inverse>
+</rule>
+<rule>
+  <key>W0631</key>
+  <name>Using possibly undefined loop variable {a}</name>
+  <description><![CDATA[Used when an loop variable (i.e. defined by a for loop or               a list comprehension or a generator expression) is used outside               the loop.]]></description>
+  <messages>
+    <message>Using possibly undefined loop variable {a}</message>
+  </messages>
+  <priority>MINOR</priority>
+  <inverse>false</inverse>
+</rule>
+<rule>
+  <key>W0604</key>
+  <name>Using the global statement at the module level</name>
+  <description><![CDATA[Used when you use the "global" statement at the module level               since it has no effect]]></description>
+  <messages>
+    <message>Using the global statement at the module level</message>
+  </messages>
+  <priority>MINOR</priority>
+  <inverse>false</inverse>
+</rule>
+<rule>
+  <key>W0601</key>
+  <name>Global variable {a} undefined at the module level</name>
+  <description><![CDATA[Used when a variable is defined through the "global" statement               but the variable is not defined in the module scope.]]></description>
+  <messages>
+    <message>Global variable {a} undefined at the module level</message>
+  </messages>
+  <priority>MINOR</priority>
+  <inverse>false</inverse>
+</rule>
+<rule>
+  <key>W0602</key>
+  <name>Using global for {a} but no assignment is done</name>
+  <description><![CDATA[Used when a variable is defined through the "global" statement               but no assignment to this variable is done.]]></description>
+  <messages>
+    <message>Using global for {a} but no assignment is done</message>
+  </messages>
+  <priority>MINOR</priority>
+  <inverse>false</inverse>
+</rule>
+<rule>
+  <key>W0603</key>
+  <name>Using the global statement</name>
+  <description><![CDATA[Used when you use the "global" statement to update a global               variable. PyLint just try to discourage this               usage. That doesn't mean you can not use it !]]></description>
+  <messages>
+    <message>Using the global statement</message>
+  </messages>
+  <priority>MINOR</priority>
+  <inverse>false</inverse>
+</rule>
+<rule>
+  <key>E0611</key>
+  <name>No name {a} in module {a}</name>
+  <description><![CDATA[Used when a name cannot be found in a module.]]></description>
+  <messages>
+    <message>No name {a} in module {a}</message>
+  </messages>
+  <priority>MAJOR</priority>
+  <inverse>false</inverse>
+</rule>
+<rule>
+  <key>W0621</key>
+  <name>Redefining name {a} from outer scope (line {a})</name>
+  <description><![CDATA[Used when a variable's name hide a name defined in the outer               scope.]]></description>
+  <messages>
+    <message>Redefining name {a} from outer scope (line {a})</message>
+  </messages>
+  <priority>MINOR</priority>
+  <inverse>false</inverse>
+</rule>
+<rule>
+  <key>W0613</key>
+  <name>Unused argument {a}</name>
+  <description><![CDATA[Used when a function or method argument is not used.]]></description>
+  <messages>
+    <message>Unused argument {a}</message>
+  </messages>
+  <priority>MINOR</priority>
+  <inverse>false</inverse>
+</rule>
+<rule>
+  <key>W0612</key>
+  <name>Unused variable {a}</name>
+  <description><![CDATA[Used when a variable is defined but not used.]]></description>
+  <messages>
+    <message>Unused variable {a}</message>
+  </messages>
+  <priority>MINOR</priority>
+  <inverse>false</inverse>
+</rule>
+<rule>
+  <key>W0611</key>
+  <name>Unused import {a}</name>
+  <description><![CDATA[Used when an imported module or variable is not used.]]></description>
+  <messages>
+    <message>Unused import {a}</message>
+  </messages>
+  <priority>MINOR</priority>
+  <inverse>false</inverse>
+</rule>
+<rule>
+  <key>W0622</key>
+  <name>Redefining built-in {a}</name>
+  <description><![CDATA[Used when a variable or function override a built-in.]]></description>
+  <messages>
+    <message>Redefining built-in {a}</message>
+  </messages>
+  <priority>MINOR</priority>
+  <inverse>false</inverse>
+</rule>
+<rule>
+  <key>W0614</key>
+  <name>Unused import {a} from wildcard import</name>
+  <description><![CDATA[Used when an imported module or variable is not used from a               'from X import *' style import.]]></description>
+  <messages>
+    <message>Unused import {a} from wildcard import</message>
+  </messages>
+  <priority>MINOR</priority>
+  <inverse>false</inverse>
+</rule>
+</rules>
