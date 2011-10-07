@@ -28,6 +28,7 @@ import org.apache.commons.io.FilenameUtils;
 import org.apache.commons.lang.StringUtils;
 import org.codehaus.staxmate.in.SMHierarchicCursor;
 import org.codehaus.staxmate.in.SMInputCursor;
+import org.slf4j.LoggerFactory;
 import org.sonar.api.batch.SensorContext;
 import org.sonar.api.measures.CoreMetrics;
 import org.sonar.api.measures.Measure;
@@ -74,6 +75,7 @@ public abstract class AbstractCoberturaParser {
       Map<String, FileData> fileDataPerFilename = new HashMap<String, FileData>();
       collectFileMeasures(pack.descendantElementCursor("class"), fileDataPerFilename);
       for (FileData cci : fileDataPerFilename.values()) {
+        LoggerFactory.getLogger(PythonCoberturaSensor.class).info("file {} exists {}", cci.getFile(), isFileExist(context, cci.getFile()));
         if (isFileExist(context, cci.getFile())) {
           for (Measure measure : cci.getMeasures()) {
             context.saveMeasure(cci.getFile(), measure);
@@ -88,12 +90,17 @@ public abstract class AbstractCoberturaParser {
   }
 
   private void collectFileMeasures(SMInputCursor clazz, Map<String, FileData> dataPerFilename) throws ParseException, XMLStreamException {
-    while (clazz.getNext() != null) {
+      LoggerFactory.getLogger(PythonCoberturaSensor.class).info("clazz {}", clazz);      
+      LoggerFactory.getLogger(PythonCoberturaSensor.class).info("dataPerFilename {}", dataPerFilename.size());
+      while (clazz.getNext() != null) {
       String fileName = FilenameUtils.removeExtension(clazz.getAttrValue("filename"));
       fileName = fileName.replace('/', '.').replace('\\', '.');
+      LoggerFactory.getLogger(PythonCoberturaSensor.class).info("fileName {}", fileName);      
       FileData data = dataPerFilename.get(fileName);
+      LoggerFactory.getLogger(PythonCoberturaSensor.class).info("fileData {}", data);
       if (data == null) {
         data = new FileData(getResource(fileName));
+        LoggerFactory.getLogger(PythonCoberturaSensor.class).info("data {}", data);
         dataPerFilename.put(fileName, data);
       }
       collectFileData(clazz, data);
@@ -101,13 +108,17 @@ public abstract class AbstractCoberturaParser {
   }
 
   private void collectFileData(SMInputCursor clazz, FileData data) throws ParseException, XMLStreamException {
-    SMInputCursor line = clazz.childElementCursor("lines").advance().childElementCursor("line");
+    SMInputCursor line = clazz.childElementCursor("lines").advance().childElementCursor("line");    
     while (line.getNext() != null) {
       String lineId = line.getAttrValue("number");
+      LoggerFactory.getLogger(PythonCoberturaSensor.class).info("lineId {}", lineId);
       data.addLine(lineId, (int) parseNumber(line.getAttrValue("hits"), ENGLISH));
-
+      LoggerFactory.getLogger(PythonCoberturaSensor.class).info("hits {}", line.getAttrValue("hits"));
+      
       String isBranch = line.getAttrValue("branch");
+      LoggerFactory.getLogger(PythonCoberturaSensor.class).info("isBranch {}", isBranch);
       String text = line.getAttrValue("condition-coverage");
+      LoggerFactory.getLogger(PythonCoberturaSensor.class).info("conditionCoverage {}", text);
       if (StringUtils.equals(isBranch, "true") && StringUtils.isNotBlank(text)) {
         String[] conditions = StringUtils.split(StringUtils.substringBetween(text, "(", ")"), "/");
         data.addConditionLine(lineId, Integer.parseInt(conditions[0]), Integer.parseInt(conditions[1]), StringUtils.substringBefore(text, " "));

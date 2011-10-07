@@ -23,8 +23,10 @@ package org.sonar.plugins.python;
 import java.io.File;
 import java.util.List;
 
+import org.slf4j.LoggerFactory;
 import org.sonar.api.batch.AbstractSourceImporter;
 import org.sonar.api.resources.Resource;
+import org.sonar.plugins.python.cobertura.PythonCoberturaSensor;
 
 public class PythonSourceImporter extends AbstractSourceImporter {
 

@@ -23,7 +23,6 @@ package org.sonar.plugins.python.cobertura;
 import java.io.File;
 
 import org.slf4j.LoggerFactory;
-import org.sonar.api.batch.AbstractCoverageExtension;
 import org.sonar.api.batch.Sensor;
 import org.sonar.api.batch.SensorContext;
 import org.sonar.api.resources.Project;
@@ -31,28 +30,28 @@ import org.sonar.api.resources.Resource;
 import org.sonar.plugins.python.Python;
 import org.sonar.plugins.python.PythonFile;
 
-public class PythonCoberturaSensor extends AbstractCoverageExtension implements Sensor {
+public class PythonCoberturaSensor implements Sensor {
 	  private Python python;
-//  private PythonCoberturaMavenPluginHandler handler;
-
-//  public PythonCoberturaSensor(PythonCoberturaMavenPluginHandler handler) {
-//    this.handler = handler;
-//  }
 
   public PythonCoberturaSensor(Python python) {
+      LoggerFactory.getLogger(PythonCoberturaSensor.class).info("python: {}", python);
 	  this.python = python;
   }
 
-  @Override
   public boolean shouldExecuteOnProject(Project project) {
     //return super.shouldExecuteOnProject(project) && project.getFileSystem().hasJavaSourceFiles();
-	  return project.getLanguage().equals(python);
+	  boolean answer = project.getLanguage().equals(python);
+	  return answer;
   }
 
-  public void analyse(Project project, SensorContext context) {
+  public void analyse(Project project, SensorContext context) {      
     File report = CoberturaUtils.getReport(project);
+
     if (report != null) {
+      LoggerFactory.getLogger(PythonCoberturaSensor.class).info("report: {}", report.getAbsolutePath());
       parseReport(report, context);
+    } else {
+        LoggerFactory.getLogger(PythonCoberturaSensor.class).info("report is null!");
     }
   }
 
@@ -68,7 +67,7 @@ public class PythonCoberturaSensor extends AbstractCoverageExtension implements 
     new AbstractCoberturaParser() {
       @Override
       protected Resource<?> getResource(String fileName) {
-    	LoggerFactory.getLogger(PythonCoberturaSensor.class).debug("resource {}", fileName);
+    	LoggerFactory.getLogger(PythonCoberturaSensor.class).info("resource {}", fileName);
         return new PythonFile(fileName, false);
       }
     }.parseReport(xmlFile, context);
@@ -78,4 +77,5 @@ public class PythonCoberturaSensor extends AbstractCoverageExtension implements 
   public String toString() {
     return getClass().getSimpleName();
   }
+
 }

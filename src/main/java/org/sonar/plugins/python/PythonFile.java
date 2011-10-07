@@ -43,8 +43,11 @@ public class PythonFile extends Resource<PythonPackage> {
    *          whether it is a unit test file or a source file
    */
   public PythonFile(String key, boolean unitTest) {
-    super();
+    super();    
     String realKey = StringUtils.trim(key);
+    //if( realKey.endsWith(".py") )
+    //    realKey = realKey.substring(0, realKey.length()-3);
+    
     this.unitTest = unitTest;
 
     if (realKey.contains(".")) {

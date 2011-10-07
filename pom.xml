@@ -2,13 +2,6 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
-  <parent>
-    <groupId>org.codehaus.sonar-plugins</groupId>
-    <artifactId>parent</artifactId>
-    <version>10</version>
-    <relativePath>../parent</relativePath>
-  </parent>
-
   <groupId>org.codehaus.sonar-plugins</groupId>
   <artifactId>sonar-python-plugin</artifactId>
   <version>0.4-SNAPSHOT</version>
@@ -56,8 +49,8 @@
 
   <properties>
     <sonar.exclusions>org/sonar/plugins/javascript/cpd/antlr/**/*.java</sonar.exclusions>
-    <sonar.version>2.5-SNAPSHOT</sonar.version>
-    <sonar.pluginName>JavaScript</sonar.pluginName>
+    <sonar.version>2.12-SNAPSHOT</sonar.version>
+    <sonar.pluginName>Python</sonar.pluginName>
     <license.owner>Eriks Nukis</license.owner>
   </properties>
 
@@ -67,11 +60,13 @@
       <artifactId>sonar-plugin-api</artifactId>
       <version>${sonar.version}</version>
     </dependency>
+    <!-- 
     <dependency>
       <groupId>com.popego</groupId>
       <artifactId>pylint4java</artifactId>
       <version>0.1-SNAPSHOT</version>
     </dependency>
+    -->
     <dependency>
       <groupId>org.codehaus.sonar.plugins</groupId>
   	  <artifactId>sonar-surefire-plugin</artifactId>

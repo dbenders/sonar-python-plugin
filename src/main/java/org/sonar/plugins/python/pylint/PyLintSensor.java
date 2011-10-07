@@ -200,7 +200,9 @@ public class PyLintSensor implements Sensor {
   }
 
   public boolean shouldExecuteOnProject(Project project) {
-    return project.getLanguage().equals(python);
+    // XXX
+      return false;
+      //return project.getLanguage().equals(python);
   }
 
   private void initializePyLint() {
