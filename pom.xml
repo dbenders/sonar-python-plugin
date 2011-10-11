@@ -49,7 +49,7 @@
 
   <properties>
     <sonar.exclusions>org/sonar/plugins/javascript/cpd/antlr/**/*.java</sonar.exclusions>
-    <sonar.version>2.12-SNAPSHOT</sonar.version>
+    <sonar.version>2.10</sonar.version>
     <sonar.pluginName>Python</sonar.pluginName>
     <license.owner>Eriks Nukis</license.owner>
   </properties>
@@ -60,18 +60,18 @@
       <artifactId>sonar-plugin-api</artifactId>
       <version>${sonar.version}</version>
     </dependency>
-    <!-- 
     <dependency>
-      <groupId>com.popego</groupId>
-      <artifactId>pylint4java</artifactId>
-      <version>0.1-SNAPSHOT</version>
-    </dependency>
-    -->
+    	<groupId>org.apache.maven</groupId>
+    	<artifactId>maven-project</artifactId>
+    	<version>2.2.1</version>
+	</dependency>
+    
     <dependency>
       <groupId>org.codehaus.sonar.plugins</groupId>
   	  <artifactId>sonar-surefire-plugin</artifactId>
       <version>${sonar.version}</version>
-    </dependency>    
+    </dependency>
+        
 <!--
     <dependency>
       <groupId>org.antlr</groupId>
@@ -96,6 +96,16 @@
       <version>4.8.1</version>
       <scope>test</scope>
     </dependency>
+    <dependency>
+    	<groupId>net.sf.opencsv</groupId>
+    	<artifactId>opencsv</artifactId>
+    	<version>2.3</version>
+	</dependency>
+	<dependency>
+    	<groupId>org.mockito</groupId>
+    	<artifactId>mockito-all</artifactId>
+    	<version>1.8.5</version>
+	</dependency>
   </dependencies>
 
   <build>

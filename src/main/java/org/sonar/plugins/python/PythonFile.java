@@ -27,7 +27,9 @@ import org.apache.commons.lang.StringUtils;
 import org.apache.commons.lang.builder.ToStringBuilder;
 import org.sonar.api.resources.DefaultProjectFileSystem;
 import org.sonar.api.resources.Language;
+import org.sonar.api.resources.Qualifiers;
 import org.sonar.api.resources.Resource;
+import org.sonar.api.resources.Scopes;
 import org.sonar.api.utils.WildcardPattern;
 
 public class PythonFile extends Resource<PythonPackage> {
@@ -75,10 +77,10 @@ public class PythonFile extends Resource<PythonPackage> {
     if (StringUtils.isBlank(packageKey)) {
       this.packageKey = PythonPackage.DEFAULT_PACKAGE_NAME;
       this.longName = this.filename;
-      key = new StringBuilder().append(this.packageKey).append(".").append(this.filename).toString();
+      key = new StringBuilder().append(this.packageKey).append("/").append(this.filename).toString();
     } else {
       this.packageKey = packageKey.trim();
-      key = new StringBuilder().append(this.packageKey).append(".").append(this.filename).toString();
+      key = new StringBuilder().append(this.packageKey).append("/").append(this.filename).toString();
       this.longName = key;
     }
     setKey(key);
@@ -115,12 +117,12 @@ public class PythonFile extends Resource<PythonPackage> {
 
   @Override
   public String getScope() {
-    return Resource.SCOPE_ENTITY;
+    return Scopes.FILE;
   }
 
   @Override
   public String getQualifier() {
-    return unitTest ? Resource.QUALIFIER_UNIT_TEST_CLASS : Resource.QUALIFIER_CLASS;
+    return unitTest ? Qualifiers.UNIT_TEST_FILE : Qualifiers.CLASS;
   }
 
   public boolean isUnitTest() {
@@ -149,14 +151,20 @@ public class PythonFile extends Resource<PythonPackage> {
     if (file == null) {
       return null;
     }
-    String relativePath = DefaultProjectFileSystem.getRelativePath(file, sourceDirs);
+    String relativePath;
+    
+    if (file.isAbsolute()) {
+      relativePath = DefaultProjectFileSystem.getRelativePath(file, sourceDirs);
+    } else {
+      relativePath = file.getPath();
+    }
     if (relativePath != null) {
       String pacname = null;
       String classname = relativePath;
 
       if (relativePath.indexOf('/') >= 0) {
         pacname = StringUtils.substringBeforeLast(relativePath, "/");
-        pacname = StringUtils.replace(pacname, "/", ".");
+        //pacname = StringUtils.replace(pacname, "/", ".");
         classname = StringUtils.substringAfterLast(relativePath, "/");
       }
       return new PythonFile(pacname, classname, unitTest);

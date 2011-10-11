@@ -20,56 +20,43 @@
 
 package org.sonar.plugins.python.pylint;
 
+import java.io.IOException;
+import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.sonar.api.BatchExtension;
 import org.sonar.api.ServerExtension;
 
-import com.googlecode.pylint4java.Option;
 
 public class PyLintRuleManager implements ServerExtension, BatchExtension {
 
-  private List<PyLintRule> rules = new ArrayList<PyLintRule>();
+	private static Logger logger = LoggerFactory.getLogger(PyLintRuleManager.class);
+	
+	private List<PyLintRule> rules = new ArrayList<PyLintRule>();
+	
+//	public static final String OTHER_RULES_KEY = "OTHER_RULES";
+//	public static final String UNUSED_NAMES_KEY = "UNUSED_NAMES";
+//	public static final String CYCLOMATIC_COMPLEXITY_KEY = "CYCLOMATIC_COMPLEXITY";
 
-  public static final String OTHER_RULES_KEY = "OTHER_RULES";
-  public static final String UNUSED_NAMES_KEY = "UNUSED_NAMES";
-  public static final String CYCLOMATIC_COMPLEXITY_KEY = "CYCLOMATIC_COMPLEXITY";
+	public PyLintRuleManager() throws IOException {
+		rules = new PyLintCsvRuleParser().parse(
+				new InputStreamReader(getClass().getResourceAsStream("rules.csv")));
+		logger.info("{} rules loader", rules.size());
+	}
 
-  public PyLintRuleManager() {
+	public List<PyLintRule> getPyLintRules() {
+		return rules;
+	}
 
-    rules = new PyLintXmlRuleParser().parse(PyLintRuleManager.class.getResourceAsStream("/org/sonar/plugins/python/pylint/rules.xml"));
-    System.out.println("Python rules");
-  }
-
-  public List<PyLintRule> getPyLintRules() {
-    return rules;
-  }
-
-  public String getRuleIdByMessage(String message) {
-    for (PyLintRule rule : rules) {
-      if (rule.hasMessage(message)) {
-        return rule.getKey();
-      }
-    }
-    return OTHER_RULES_KEY;
-  }
-
-  public boolean isRuleInverse(String ruleKey) {
-    for (PyLintRule rule : rules) {
-      if (ruleKey.equals(rule.getKey())) {
-        return rule.isInverse();
-      }
-    }
-    return false;
-  }
-
-  public Option getOptionByName(String name) {
-    for (Option o : Option.values()) {
-      if (o.name().equalsIgnoreCase(name)) {
-        return o;
-      }
-    }
-    return null;
-  }
+//	public String getRuleCodeByMessage(String message) {
+//		for (PyLintRule rule : rules) {
+//			if (rule.getMessage().equals(message)) {
+//				return rule.getCode();
+//			}
+//		}
+//		return OTHER_RULES_KEY;
+//	}
 }

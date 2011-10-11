@@ -23,7 +23,9 @@ package org.sonar.plugins.python;
 import org.apache.commons.lang.StringUtils;
 import org.apache.commons.lang.builder.ToStringBuilder;
 import org.sonar.api.resources.Language;
+import org.sonar.api.resources.Qualifiers;
 import org.sonar.api.resources.Resource;
+import org.sonar.api.resources.Scopes;
 import org.sonar.api.utils.WildcardPattern;
 
 public class PythonPackage extends Resource {
@@ -53,12 +55,12 @@ public class PythonPackage extends Resource {
 
   @Override
   public String getScope() {
-    return Resource.SCOPE_SPACE;
+    return Scopes.DIRECTORY;
   }
 
   @Override
   public String getQualifier() {
-    return Resource.QUALIFIER_PACKAGE;
+    return Qualifiers.PACKAGE;
   }
 
   @Override
@@ -73,7 +75,7 @@ public class PythonPackage extends Resource {
 
   @Override
   public String getLongName() {
-    return null;
+    return getKey();
   }
 
   @Override

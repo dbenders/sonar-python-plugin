@@ -20,129 +20,51 @@
 
 package org.sonar.plugins.python.pylint;
 
-import java.util.ArrayList;
-import java.util.List;
-
-import org.apache.commons.lang.StringUtils;
-import org.sonar.api.rules.RuleParam;
 import org.sonar.api.rules.RulePriority;
-import org.sonar.api.rules.RulesCategory;
 
 public class PyLintRule {
 
-  private String key;
-  private String name;
-  private RulesCategory category;
-  private RulePriority priority;
-  private String description;
-  private List<RuleParam> params = new ArrayList<RuleParam>();
+	private String code;
+	private String message;
 
-  /*
-   * if true, opposite value should be passed to pyLint
-   * 
-   * example rules: "Tolerate debugger statements", "Tolerate eval", "Tolerate sloppy line breaking"..
-   */
-  private boolean inverse = false;
+	public String getDescription() {
+		return message;
+	}
 
-  public String getDescription() {
-    return description;
-  }
+	public PyLintRule() {
+	}
 
-  public void setDescription(String description) {
-    this.description = description;
-  }
+	public PyLintRule(String code, String message) {  
+	    this.code = code;
+	    this.message = message;
+	}
 
-  public PyLintRule() {
+	public RulePriority getSeverity() {
+		switch( code.charAt(0) ) {
+			case 'E': return RulePriority.BLOCKER;
+			case 'W': return RulePriority.MAJOR;
+			case 'R': 
+			case 'C': return RulePriority.MINOR;
+			case 'F':
+			case 'I': return RulePriority.INFO;
+		default:
+			return null;
+		}
+	}
 
-  }
+	public String getCode() {
+		return code;
+	}
 
-  public PyLintRule(String key, String name, boolean inverse, RulesCategory category, RulePriority priority, String... messages) {
+	public void setCode(String code) {
+		this.code = code;
+	}
+	
+	public String getMessage() {
+		return message;
+	}
 
-    this.inverse = inverse;
-    this.key = key;
-    this.name = name;
-    this.category = category;
-    this.priority = priority;
-    for (String message : messages) {
-      this.messages.add(message);
+    public void setMessage(String message) {
+	    this.message = message;
     }
-  }
-
-  public RulesCategory getRulesCategory() {
-    return category;
-  }
-
-  public void setRulesCategory(RulesCategory category) {
-    this.category = category;
-  }
-
-  public RulePriority getPriority() {
-    return priority;
-  }
-
-  public void setPriority(RulePriority priority) {
-    this.priority = priority;
-  }
-
-  private List<String> messages = new ArrayList<String>();
-
-  public String getKey() {
-    return key;
-  }
-
-  public void setKey(String key) {
-    this.key = key;
-  }
-
-  public String getName() {
-    return name;
-  }
-
-  public void setName(String name) {
-    this.name = name;
-  }
-
-  public List<String> getMessages() {
-    return messages;
-  }
-
-  public void setMessages(List<String> messages) {
-    this.messages = messages;
-  }
-
-  public boolean isInverse() {
-    return inverse;
-  }
-
-  public void setInverse(boolean inverse) {
-    this.inverse = inverse;
-  }
-
-  public boolean hasMessage(String message) {
-    for (String registeredMessage : messages) {
-      if (registeredMessage.equals(message)) {
-        return true;
-      }
-    }
-    return false;
-  }
-
-  public RuleParam createParameter() {
-    RuleParam parameter = new RuleParam();
-    params.add(parameter);
-    return parameter;
-  }
-
-  public List<RuleParam> getParams() {
-    return params;
-  }
-
-  public RuleParam getParam(String key) {
-    for (RuleParam param : params) {
-      if (StringUtils.equals(key, param.getKey())) {
-        return param;
-      }
-    }
-    return null;
-  }
 }

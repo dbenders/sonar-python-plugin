@@ -19,53 +19,42 @@
  */
 package org.sonar.plugins.python.nose;
 
+import java.io.File;
+
+import org.apache.commons.lang.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.sonar.api.batch.AbstractCoverageExtension;
-import org.sonar.api.batch.DependsUpon;
 import org.sonar.api.batch.Sensor;
 import org.sonar.api.batch.SensorContext;
-import org.sonar.api.resources.Java;
-import org.sonar.api.resources.JavaFile;
 import org.sonar.api.resources.Project;
 import org.sonar.api.resources.Resource;
 import org.sonar.plugins.python.Python;
 import org.sonar.plugins.python.PythonFile;
 import org.sonar.plugins.surefire.api.AbstractSurefireParser;
-import org.sonar.plugins.surefire.api.SurefireUtils;
-
-import java.io.File;
 
 public class NoseSensor implements Sensor {
 
-  private static Logger logger = LoggerFactory.getLogger(NoseSensor.class);
+	private static final Logger LOG = LoggerFactory.getLogger(NoseSensor.class);
 
-  @DependsUpon
-  public Class<?> dependsUponCoverageSensors() {
-    return AbstractCoverageExtension.class;
-  }
+	public boolean shouldExecuteOnProject(Project project) {
+		return project.getAnalysisType().isDynamic(true) && Python.KEY.equals(project.getLanguageKey());
+	}
 
-  public boolean shouldExecuteOnProject(Project project) {
-    return project.getAnalysisType().isDynamic(true) && Python.KEY.equals(project.getLanguageKey());
-  }
+	public void analyse(Project project, SensorContext sensorContext) {
+	    File reportFile = NoseUtils.getReport(project);
+	    if( reportFile != null ) {
+		    LOG.debug("Analyzing xunit report {}", reportFile.getAbsolutePath());
+	    	collect(project, sensorContext, reportFile);
+	    }
+	}
 
-  public void analyse(Project project, SensorContext context) {
-    File dir = SurefireUtils.getReportsDirectory(project);
-    collect(project, context, dir);
-  }
+	protected void collect(Project project, SensorContext context, File reportsFile) {
+		new NoseParser() {
+		}.collect(project, context, reportsFile);
+	}
 
-  protected void collect(Project project, SensorContext context, File reportsDir) {
-    logger.info("parsing {}", reportsDir);
-    new AbstractSurefireParser() {
-      @Override
-      protected Resource<?> getUnitTestResource(String classKey) {
-        return new PythonFile(classKey, true);
-      }
-    }.collect(project, context, reportsDir);
-  }
-
-  @Override
-  public String toString() {
-    return getClass().getSimpleName();
-  }
+	@Override
+	public String toString() {
+		return getClass().getSimpleName();
+	}
 }

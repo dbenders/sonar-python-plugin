@@ -28,36 +28,19 @@ import org.sonar.plugins.python.pylint.PyLintRuleRepository;
 
 public class PythonDefaultProfile extends ProfileDefinition {
 
-  // disabled rules as per "The Good Parts" setting in http://pylint.com
-  private String[] disabledRules = new String[] { "ADSAFE", "STRICT" };
-  private PyLintRuleRepository repository;
+	private PyLintRuleRepository repository;
 
-  public PythonDefaultProfile(PyLintRuleRepository repository) {
-    this.repository = repository;
+	public PythonDefaultProfile(PyLintRuleRepository repository) {
+		this.repository = repository;
+	}
 
-  }
+	@Override
+	public RulesProfile createProfile(ValidationMessages validation) {
+		RulesProfile rulesProfile = RulesProfile.create("Default Python Profile", "py");
 
-  @Override
-  public RulesProfile createProfile(ValidationMessages validation) {
-    RulesProfile rulesProfile = RulesProfile.create("Default Python Profile", "py");
-
-    for (Rule rule : repository.createRules()) {
-      if ( !isDisabled(rule)) {
-        rulesProfile.activateRule(rule, null);
-      }
-    }
-
-    return rulesProfile;
-
-  }
-
-  private boolean isDisabled(Rule rule) {
-    for (String ruleKey : disabledRules) {
-      if (ruleKey.equals(rule.getKey())) {
-        return true;
-      }
-    }
-    return false;
-
-  }
+		for (Rule rule : repository.createRules()) {
+			rulesProfile.activateRule(rule, null);
+		}
+		return rulesProfile;
+	}
 }

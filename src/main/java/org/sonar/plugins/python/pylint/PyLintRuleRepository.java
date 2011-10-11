@@ -25,49 +25,45 @@ import java.util.List;
 
 import org.sonar.api.BatchExtension;
 import org.sonar.api.rules.Rule;
-import org.sonar.api.rules.RuleParam;
 import org.sonar.api.rules.RuleRepository;
 import org.sonar.plugins.python.Python;
 
 public class PyLintRuleRepository extends RuleRepository implements BatchExtension {
 
-  private PyLintRuleManager pyLintRuleManager;
+	private PyLintRuleManager pyLintRuleManager;
 
-  public PyLintRuleRepository(Python python, PyLintRuleManager pyLintRuleManager) {
-    super(REPOSITORY_KEY, python.getKey());
-    setName(REPOSITORY_NAME);
+	public PyLintRuleRepository(Python python, PyLintRuleManager pyLintRuleManager) {
+		super(REPOSITORY_KEY, python.getKey());
+		setName(REPOSITORY_NAME);
 
-    this.pyLintRuleManager = pyLintRuleManager;
-  }
+		this.pyLintRuleManager = pyLintRuleManager;
+	}
 
-  public static final String REPOSITORY_NAME = "Python";
-  public static final String REPOSITORY_KEY = "Python";
+	public static final String REPOSITORY_NAME = "PyLint Python code checker";
+	public static final String REPOSITORY_KEY = "PyLint";
 
-  @Override
-  public List<Rule> createRules() {
+	@Override
+	public List<Rule> createRules() {
 
-    List<Rule> rulesList = new ArrayList<Rule>();
+		List<Rule> rulesList = new ArrayList<Rule>();
 
-    for (PyLintRule pyLintRule : pyLintRuleManager.getPyLintRules()) {
-      Rule rule = Rule.create(REPOSITORY_KEY, pyLintRule.getKey(), pyLintRule.getName());
+		for (PyLintRule pyLintRule : pyLintRuleManager.getPyLintRules()) {
+			Rule rule = Rule.create(REPOSITORY_KEY, pyLintRule.getCode(), pyLintRule.getMessage());
+			rule.setSeverity(pyLintRule.getSeverity());
+			
+			//rule.setDescription(pyLintRule.getDescription());
 
-      rule.setDescription(pyLintRule.getDescription());
-      rule.setPriority(pyLintRule.getPriority());
+	//      for (RuleParam ruleParam : pyLintRule.getParams()) {
+	//        RuleParam param = rule.createParameter();
+	//        param.setKey(ruleParam.getKey());
+	//        param.setDefaultValue(ruleParam.getDefaultValue());
+	//        param.setDescription(ruleParam.getDescription());
+	//        param.setType(ruleParam.getType());
+	//      }
 
-      for (RuleParam ruleParam : pyLintRule.getParams()) {
-        RuleParam param = rule.createParameter();
-        param.setKey(ruleParam.getKey());
-        param.setDefaultValue(ruleParam.getDefaultValue());
-        param.setDescription(ruleParam.getDescription());
-        param.setType(ruleParam.getType());
-      }
+			rulesList.add(rule);
+		}
 
-      // this is removed in Sonar 2.5
-      // rule.setRulesCategory(Iso9126RulesCategories.MAINTAINABILITY);
-
-      rulesList.add(rule);
-    }
-
-    return rulesList;
-  }
+		return rulesList;
+	}
 }

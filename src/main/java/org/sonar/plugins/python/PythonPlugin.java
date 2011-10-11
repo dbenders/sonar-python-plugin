@@ -28,10 +28,10 @@ import org.sonar.api.Plugin;
 import org.sonar.api.Properties;
 import org.sonar.api.Property;
 import org.sonar.plugins.python.cobertura.PythonCoberturaSensor;
+import org.sonar.plugins.python.nose.NoseSensor;
 import org.sonar.plugins.python.pylint.PyLintRuleManager;
 import org.sonar.plugins.python.pylint.PyLintSensor;
 import org.sonar.plugins.python.pylint.PyLintRuleRepository;
-import org.sonar.plugins.python.surefire.PythonSurefireSensor;
 
 @Properties({
     @Property(key = PythonPlugin.FILE_SUFFIXES_KEY, defaultValue = PythonPlugin.FILE_SUFFIXES_DEFVALUE, name = "File suffixes",
@@ -40,51 +40,51 @@ import org.sonar.plugins.python.surefire.PythonSurefireSensor;
 })
 public class PythonPlugin implements Plugin {
 
-  public String getKey() {
-    return PYTHON_PLUGIN;
-  }
+	public String getKey() {
+		return PYTHON_PLUGIN;
+	}
 
-  public String getName() {
-    return "Python";
-  }
+	public String getName() {
+		return "Python";
+	}
 
-  public String getDescription() {
-    return "Analysis of Python projects";
-  }
+	public String getDescription() {
+		return "Analysis of Python projects";
+	}
 
-  public List<Class<? extends Extension>> getExtensions() {
-    List<Class<? extends Extension>> list = new ArrayList<Class<? extends Extension>>();
+	public List<Class<? extends Extension>> getExtensions() {
+		List<Class<? extends Extension>> list = new ArrayList<Class<? extends Extension>>();
 
-    //list.add(PythonColorizerFormat.class);
-    list.add(Python.class);
-    list.add(PythonSourceImporter.class);
+		//list.add(PythonColorizerFormat.class);
+		list.add(Python.class);
+		list.add(PythonSourceImporter.class);
 
-    //list.add(PythonCpdMapping.class);
+		//list.add(PythonCpdMapping.class);
 
-    list.add(PyLintRuleRepository.class);
+		list.add(PyLintRuleRepository.class);
 
-    //list.add(PythonSquidSensor.class);
+		//list.add(PythonSquidSensor.class);
 
-    list.add(PyLintSensor.class);
+		list.add(PyLintSensor.class);
 
-    list.add(PyLintRuleManager.class);
+		list.add(PyLintRuleManager.class);
 
-    list.add(PythonDefaultProfile.class);
+		list.add(PythonDefaultProfile.class);
     
-    //list.add(PythonComplexitySensor.class);
+		//list.add(PythonComplexitySensor.class);
     
-    list.add(PythonSurefireSensor.class);
+		list.add(NoseSensor.class);
 
-    list.add(PythonCoberturaSensor.class);
+		//list.add(PythonCoberturaSensor.class);
     
-    return list;
-  }
+		return list;
+	}
 
-  public final static String FALSE = "false";
-  public final static String PYTHON_PLUGIN = "PythonPlugin";
+	public final static String FALSE = "false";
+	public final static String PYTHON_PLUGIN = "PythonPlugin";
 
-  public static final String FILE_SUFFIXES_KEY = "sonar.python.file.suffixes";
-  public static final String FILE_SUFFIXES_DEFVALUE = "py";
+	public static final String FILE_SUFFIXES_KEY = "sonar.python.file.suffixes";
+	public static final String FILE_SUFFIXES_DEFVALUE = "py";
 
-  public static final String[] GLOBAL_PARAMETERS = new String[] {};
+	public static final String[] GLOBAL_PARAMETERS = new String[] {};
 }

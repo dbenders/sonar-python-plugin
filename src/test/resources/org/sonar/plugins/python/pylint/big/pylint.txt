@@ -1,0 +1,1117 @@
+pycommons/date.py:42: [W0311] Bad indentation. Found 23 spaces, expected 24
+pycommons/date.py:1: [C0111] Missing docstring
+pycommons/date.py:2: [C0322] Operator not preceded by a space
+__docformat__='restructuredtext'
+             ^
+pycommons/date.py:3: [W0403] Relative import 'math', should be 'pycommons.math'
+pycommons/date.py:7: [W0622, strToDatetime] Redefining built-in 'str'
+pycommons/date.py:7: [C0103, strToDatetime] Invalid name "strToDatetime" (should match [a-z_][a-z0-9_]{2,30}$)
+pycommons/date.py:7: [C0111, strToDatetime] Missing docstring
+pycommons/date.py:17: [C0103, _parse_date_w3dtf] Invalid name "dateString" (should match [a-z_][a-z0-9_]{2,30}$)
+pycommons/date.py:17: [C0111, _parse_date_w3dtf] Missing docstring
+pycommons/date.py:17: [C0103, _parse_date_w3dtf] Invalid name "dateString" (should match [a-z_][a-z0-9_]{2,30}$)
+pycommons/date.py:18: [C0103, _parse_date_w3dtf.__extract_date] Invalid name "m" (should match [a-z_][a-z0-9_]{2,30}$)
+pycommons/date.py:18: [C0111, _parse_date_w3dtf.__extract_date] Missing docstring
+pycommons/date.py:18: [C0103, _parse_date_w3dtf.__extract_date] Invalid name "m" (should match [a-z_][a-z0-9_]{2,30}$)
+pycommons/date.py:31: [C0103, _parse_date_w3dtf.__extract_date] Invalid name "t" (should match [a-z_][a-z0-9_]{2,30}$)
+pycommons/date.py:18: [R0912, _parse_date_w3dtf.__extract_date] Too many branches (14/12)
+pycommons/date.py:59: [C0103, _parse_date_w3dtf.__extract_time] Invalid name "m" (should match [a-z_][a-z0-9_]{2,30}$)
+pycommons/date.py:59: [C0111, _parse_date_w3dtf.__extract_time] Missing docstring
+pycommons/date.py:59: [C0103, _parse_date_w3dtf.__extract_time] Invalid name "m" (should match [a-z_][a-z0-9_]{2,30}$)
+pycommons/date.py:74: [C0103, _parse_date_w3dtf.__extract_tzd] Invalid name "m" (should match [a-z_][a-z0-9_]{2,30}$)
+pycommons/date.py:74: [C0103, _parse_date_w3dtf.__extract_tzd] Invalid name "m" (should match [a-z_][a-z0-9_]{2,30}$)
+pycommons/date.py:105: [C0103, _parse_date_w3dtf] Invalid name "m" (should match [a-z_][a-z0-9_]{2,30}$)
+pycommons/date.py:106: [C0321, _parse_date_w3dtf] More than one statement on a single line
+pycommons/date.py:108: [C0321, _parse_date_w3dtf] More than one statement on a single line
+pycommons/date.py:17: [R0912, _parse_date_w3dtf] Too many branches (29/12)
+pycommons/reflection.py:105: [W0511] XXX Hack hasta determinar bien cuando un objeto es iterable
+pycommons/reflection.py:1: [C0111] Missing docstring
+pycommons/reflection.py:2: [C0322] Operator not preceded by a space
+__docformat__='restructuredtext'
+             ^
+pycommons/reflection.py:5: [C0103, pathToObject] Invalid name "pathToObject" (should match [a-z_][a-z0-9_]{2,30}$)
+pycommons/reflection.py:32: [C0324, pathToObject] Comma not followed by a space
+        modulePath,attrs = path.split(':',1)
+                  ^^
+pycommons/reflection.py:32: [C0103, pathToObject] Invalid name "modulePath" (should match [a-z_][a-z0-9_]{2,30}$)
+pycommons/reflection.py:34: [C0103, pathToObject] Invalid name "needsCall" (should match [a-z_][a-z0-9_]{2,30}$)
+pycommons/reflection.py:37: [C0103, pathToObject] Invalid name "needsCall" (should match [a-z_][a-z0-9_]{2,30}$)
+pycommons/reflection.py:45: [C0103, pathToObject] Invalid name "e" (should match [a-z_][a-z0-9_]{2,30}$)
+pycommons/reflection.py:45: [W0612, pathToObject] Unused variable 'e'
+pycommons/reflection.py:56: [C0103, importModule] Invalid name "importModule" (should match [a-z_][a-z0-9_]{2,30}$)
+pycommons/reflection.py:61: [C0103, findClasses] Invalid name "findClasses" (should match [a-z_][a-z0-9_]{2,30}$)
+pycommons/reflection.py:77: [C0103, isValidClass] Invalid name "isValidClass" (should match [a-z_][a-z0-9_]{2,30}$)
+pycommons/reflection.py:82: [C0324, isValidClass] Comma not followed by a space
+    modulepath, classname = classpath.split(':',1)
+                                               ^^
+pycommons/reflection.py:84: [C0103, isValidClass] Invalid name "m" (should match [a-z_][a-z0-9_]{2,30}$)
+pycommons/reflection.py:90: [C0103, getObject] Invalid name "getObject" (should match [a-z_][a-z0-9_]{2,30}$)
+pycommons/reflection.py:95: [C0324, getObject] Comma not followed by a space
+    modulepath, attrname = objpath.split(':',1)
+                                            ^^
+pycommons/reflection.py:96: [C0103, getObject] Invalid name "m" (should match [a-z_][a-z0-9_]{2,30}$)
+pycommons/reflection.py:99: [C0103, isClass] Invalid name "isClass" (should match [a-z_][a-z0-9_]{2,30}$)
+pycommons/reflection.py:104: [C0103, isIterable] Invalid name "isIterable" (should match [a-z_][a-z0-9_]{2,30}$)
+pycommons/reflection.py:104: [C0111, isIterable] Missing docstring
+pycommons/reflection.py:110: [C0103, findSubModules] Invalid name "findSubModules" (should match [a-z_][a-z0-9_]{2,30}$)
+pycommons/reflection.py:137: [C0103, trunkedProperty] Invalid name "trunkedProperty" (should match [a-z_][a-z0-9_]{2,30}$)
+pycommons/reflection.py:137: [C0111, trunkedProperty] Missing docstring
+pycommons/reflection.py:141: [C0111, trunkedProperty.setter] Missing docstring
+pycommons/reflection.py:147: [C0111, trunkedProperty.setter] Missing docstring
+pycommons/reflection.py:171: [C0103, get_resource_path] Invalid name "m" (should match [a-z_][a-z0-9_]{2,30}$)
+pycommons/closure_compiler_api.py:12: [R0903, ClosureCompilerAPI] Too few public methods (1/2)
+pycommons/alexa_api.py:37: [C0301] Line too long (100/80)
+pycommons/alexa_api.py:38: [C0301] Line too long (91/80)
+pycommons/alexa_api.py:41: [C0301] Line too long (81/80)
+pycommons/alexa_api.py:43: [C0301] Line too long (86/80)
+pycommons/alexa_api.py:46: [C0301] Line too long (99/80)
+pycommons/alexa_api.py:47: [C0301] Line too long (89/80)
+pycommons/alexa_api.py:48: [C0301] Line too long (90/80)
+pycommons/alexa_api.py:55: [C0301] Line too long (85/80)
+pycommons/alexa_api.py:7: [E0611] No name 'sha1' in module 'hashlib'
+pycommons/alexa_api.py:13: [C0111, UrlInfoResponse] Missing docstring
+pycommons/alexa_api.py:13: [R0903, UrlInfoResponse] Too few public methods (0/2)
+pycommons/alexa_api.py:59: [C0111, UrlInfoApi] Missing docstring
+pycommons/alexa_api.py:104: [C0111, UrlInfoApi._generate_signature] Missing docstring
+pycommons/alexa_api.py:59: [R0903, UrlInfoApi] Too few public methods (1/2)
+pycommons/alexa_api.py:93: [W0201, UrlInfoApi.get_data] Attribute 'timestamp' defined outside __init__
+pycommons/collections.py:237: [C0301] Line too long (110/80)
+pycommons/collections.py:1: [C0111] Missing docstring
+pycommons/collections.py:2: [C0322] Operator not preceded by a space
+__docformat__='restructuredtext'
+             ^
+pycommons/collections.py:19: [C0103, defaultdict2] Invalid name "defaultdict2" (should match [A-Z_][a-zA-Z0-9]+$)
+pycommons/collections.py:19: [C0111, defaultdict2] Missing docstring
+pycommons/collections.py:20: [W0231, defaultdict2.__init__] __init__ method from base class 'dict' is not called
+pycommons/collections.py:21: [C0322, defaultdict2.__init__] Operator not preceded by a space
+        self._default_func= default_func
+                          ^
+pycommons/collections.py:25: [C0322, defaultdict2.__getitem__] Operator not preceded by a space
+            val= self._default_func(key)
+               ^
+pycommons/collections.py:26: [C0322, defaultdict2.__getitem__] Operator not preceded by a space
+            self[key]= val
+                     ^
+pycommons/collections.py:28: [C0322, defaultdict2.__getitem__] Operator not preceded by a space
+            val= self.get(key)
+               ^
+pycommons/collections.py:31: [C0103, bag] Invalid name "bag" (should match [A-Z_][a-zA-Z0-9]+$)
+pycommons/collections.py:39: [W0212, bag.__add__] Access to a protected member _items of a client class
+pycommons/collections.py:39: [W0212, bag.__add__] Access to a protected member _items of a client class
+pycommons/collections.py:47: [W0212, bag.__and__] Access to a protected member _items of a client class
+pycommons/collections.py:54: [W0212, bag.__eq__] Access to a protected member _items of a client class
+pycommons/collections.py:60: [W0212, bag.__iadd__] Access to a protected member _items of a client class
+pycommons/collections.py:64: [W0212, bag.__iand__] Access to a protected member _items of a client class
+pycommons/collections.py:74: [W0212, bag.__ior__] Access to a protected member _items of a client class
+pycommons/collections.py:78: [W0212, bag.__isub__] Access to a protected member _items of a client class
+pycommons/collections.py:83: [W0612, bag.__iter__] Unused variable 'counter'
+pycommons/collections.py:87: [W0212, bag.__ixor__] Access to a protected member _items of a client class
+pycommons/collections.py:94: [W0212, bag.__ne__] Access to a protected member _items of a client class
+pycommons/collections.py:99: [W0212, bag.__or__] Access to a protected member _items of a client class
+pycommons/collections.py:99: [W0212, bag.__or__] Access to a protected member _items of a client class
+pycommons/collections.py:119: [W0212, bag.__sub__] Access to a protected member _items of a client class
+pycommons/collections.py:121: [W0212, bag.__sub__] Access to a protected member _items of a client class
+pycommons/collections.py:127: [W0212, bag.__xor__] Access to a protected member _items of a client class
+pycommons/collections.py:129: [W0212, bag.__xor__] Access to a protected member _items of a client class
+pycommons/collections.py:130: [W0212, bag.__xor__] Access to a protected member _item of a client class
+pycommons/collections.py:130: [E1101, bag.__xor__] Instance of 'bag' has no '_item' member
+pycommons/collections.py:131: [W0212, bag.__xor__] Access to a protected member _items of a client class
+pycommons/collections.py:134: [C0111, bag.add] Missing docstring
+pycommons/collections.py:137: [C0111, bag.discard] Missing docstring
+pycommons/collections.py:140: [C0111, bag.clear] Missing docstring
+pycommons/collections.py:143: [C0111, bag.copy] Missing docstring
+pycommons/collections.py:148: [C0111, bag.difference] Missing docstring
+pycommons/collections.py:151: [C0111, bag.difference_update] Missing docstring
+pycommons/collections.py:152: [W0212, bag.difference_update] Access to a protected member _items of a client class
+pycommons/collections.py:154: [C0111, bag.get] Missing docstring
+pycommons/collections.py:157: [C0111, bag.intersection] Missing docstring
+pycommons/collections.py:160: [C0111, bag.intersection_update] Missing docstring
+pycommons/collections.py:163: [C0111, bag.items] Missing docstring
+pycommons/collections.py:166: [C0111, bag.iteritems] Missing docstring
+pycommons/collections.py:169: [C0111, bag.iterkeys] Missing docstring
+pycommons/collections.py:172: [C0111, bag.itervalues] Missing docstring
+pycommons/collections.py:175: [C0111, bag.keys] Missing docstring
+pycommons/collections.py:178: [C0111, bag.pop] Missing docstring
+pycommons/collections.py:185: [C0111, bag.remove] Missing docstring
+pycommons/collections.py:192: [C0111, bag.symmetric_difference] Missing docstring
+pycommons/collections.py:195: [C0111, bag.symmetric_difference_update] Missing docstring
+pycommons/collections.py:198: [C0111, bag.union] Missing docstring
+pycommons/collections.py:201: [C0111, bag.update] Missing docstring
+pycommons/collections.py:203: [C0322, bag.update] Operator not preceded by a space
+            self[elem]= self.get(elem) + times
+                      ^
+pycommons/collections.py:205: [C0111, bag.values] Missing docstring
+pycommons/collections.py:31: [R0904, bag] Too many public methods (21/20)
+pycommons/collections.py:209: [C0103, sortedlist] Invalid name "sortedlist" (should match [A-Z_][a-zA-Z0-9]+$)
+pycommons/collections.py:214: [W0622, sortedlist.__init__] Redefining built-in 'iter'
+pycommons/collections.py:224: [C0111, sortedlist.insert] Missing docstring
+pycommons/collections.py:209: [R0903, sortedlist] Too few public methods (1/2)
+pycommons/collections.py:228: [C0111, NamedDict] Missing docstring
+pycommons/collections.py:234: [C0322, NamedDict.__setattr__] Operator not preceded by a space
+        self[name]= val
+                  ^
+pycommons/collections.py:237: [C0321, NamedDict.__getattr__] More than one statement on a single line
+pycommons/iterable.py:69: [W0622, all] Redefining built-in 'all'
+pycommons/iterable.py:1: [C0111] Missing docstring
+pycommons/iterable.py:6: [W0105] String statement has no effect
+pycommons/iterable.py:15: [C0103, mapDict] Invalid name "mapDict" (should match [a-z_][a-z0-9_]{2,30}$)
+pycommons/iterable.py:15: [C0103, mapDict] Invalid name "f" (should match [a-z_][a-z0-9_]{2,30}$)
+pycommons/iterable.py:15: [C0103, mapDict] Invalid name "f" (should match [a-z_][a-z0-9_]{2,30}$)
+pycommons/iterable.py:19: [C0103, mapDict] Invalid name "newDict" (should match [a-z_][a-z0-9_]{2,30}$)
+pycommons/iterable.py:24: [C0103, filterDict] Invalid name "filterDict" (should match [a-z_][a-z0-9_]{2,30}$)
+pycommons/iterable.py:38: [C0103, update_dict] Invalid name "v" (should match [a-z_][a-z0-9_]{2,30}$)
+pycommons/iterable.py:45: [C0103, izipDictWith] Invalid name "izipDictWith" (should match [a-z_][a-z0-9_]{2,30}$)
+pycommons/iterable.py:45: [C0103, izipDictWith] Invalid name "f" (should match [a-z_][a-z0-9_]{2,30}$)
+pycommons/iterable.py:45: [C0103, izipDictWith] Invalid name "a" (should match [a-z_][a-z0-9_]{2,30}$)
+pycommons/iterable.py:45: [C0103, izipDictWith] Invalid name "b" (should match [a-z_][a-z0-9_]{2,30}$)
+pycommons/iterable.py:45: [C0111, izipDictWith] Missing docstring
+pycommons/iterable.py:45: [C0103, izipDictWith] Invalid name "f" (should match [a-z_][a-z0-9_]{2,30}$)
+pycommons/iterable.py:45: [C0103, izipDictWith] Invalid name "a" (should match [a-z_][a-z0-9_]{2,30}$)
+pycommons/iterable.py:45: [C0103, izipDictWith] Invalid name "b" (should match [a-z_][a-z0-9_]{2,30}$)
+pycommons/iterable.py:49: [C0103, findFirst] Invalid name "findFirst" (should match [a-z_][a-z0-9_]{2,30}$)
+pycommons/iterable.py:87: [C0111, concat] Missing docstring
+pycommons/iterable.py:88: [C0103, concat] Invalid name "aList" (should match [a-z_][a-z0-9_]{2,30}$)
+pycommons/iterable.py:89: [C0103, concat] Invalid name "e" (should match [a-z_][a-z0-9_]{2,30}$)
+pycommons/iterable.py:92: [C0111, flatten] Missing docstring
+pycommons/iterable.py:112: [C0103, cluster] Invalid name "f" (should match [a-z_][a-z0-9_]{2,30}$)
+pycommons/iterable.py:115: [C0321, cluster] More than one statement on a single line
+pycommons/iterable.py:127: [C0103, unzip.unzip_sequence] Invalid name "s" (should match [a-z_][a-z0-9_]{2,30}$)
+pycommons/iterable.py:127: [C0111, unzip.unzip_sequence] Missing docstring
+pycommons/iterable.py:127: [C0103, unzip.unzip_sequence] Invalid name "s" (should match [a-z_][a-z0-9_]{2,30}$)
+pycommons/iterable.py:128: [C0103, unzip.unzip_sequence] Invalid name "v" (should match [a-z_][a-z0-9_]{2,30}$)
+pycommons/iterable.py:135: [W0141, unzip] Used builtin function 'map'
+pycommons/iterable.py:133: [W0612, unzip] Unused variable 'i'
+pycommons/iterable.py:153: [C0103, aggregate] Invalid name "v" (should match [a-z_][a-z0-9_]{2,30}$)
+pycommons/iterable.py:163: [W0622, PickIter.__init__] Redefining built-in 'iter'
+pycommons/iterable.py:171: [W0702, PickIter.__init__] No exception type(s) specified
+pycommons/iterable.py:175: [C0111, PickIter.next] Missing docstring
+pycommons/iterable.py:182: [W0702, PickIter.next] No exception type(s) specified
+pycommons/iterable.py:186: [C0111, PickIter.pick] Missing docstring
+pycommons/iterable.py:192: [C0111, PickIter.finished] Missing docstring
+pycommons/iterable.py:230: [W0622, leftouterjoin] Redefining built-in 'iter'
+pycommons/iterable.py:221: [W0141, leftouterjoin] Used builtin function 'map'
+pycommons/iterable.py:222: [W0141, leftouterjoin] Used builtin function 'map'
+pycommons/iterable.py:236: [W0702, leftouterjoin] No exception type(s) specified
+pycommons/iterable.py:247: [W0702, leftouterjoin] No exception type(s) specified
+pycommons/iterable.py:247: [C0321, leftouterjoin] More than one statement on a single line
+pycommons/iterable.py:248: [C0321, leftouterjoin] More than one statement on a single line
+pycommons/iterable.py:252: [C0111, SynchronizedQueue] Missing docstring
+pycommons/iterable.py:258: [C0111, SynchronizedQueue.enqueue] Missing docstring
+pycommons/iterable.py:262: [C0111, SynchronizedQueue.dequeue] Missing docstring
+pycommons/coercion.py:1: [C0111] Missing docstring
+pycommons/coercion.py:22: [C0103, coerce_pairs] Invalid name "d" (should match [a-z_][a-z0-9_]{2,30}$)
+pycommons/coercion.py:24: [C0324, coerce_pairs] Comma not followed by a space
+    for k,v in data:
+         ^^
+pycommons/coercion.py:24: [C0103, coerce_pairs] Invalid name "v" (should match [a-z_][a-z0-9_]{2,30}$)
+pycommons/coercion.py:35: [W0703, coerce_pairs] Catch "Exception"
+pycommons/coercion.py:35: [C0103, coerce_pairs] Invalid name "e" (should match [a-z_][a-z0-9_]{2,30}$)
+pycommons/coercion.py:46: [W0142, coerce_pairs] Used * or ** magic
+pycommons/coercion.py:69: [C0103, coerce_args.check_accepts] Invalid name "f" (should match [a-z_][a-z0-9_]{2,30}$)
+pycommons/coercion.py:69: [C0111, coerce_args.check_accepts] Missing docstring
+pycommons/coercion.py:69: [C0103, coerce_args.check_accepts] Invalid name "f" (should match [a-z_][a-z0-9_]{2,30}$)
+pycommons/coercion.py:70: [C0111, coerce_args.check_accepts.new_f] Missing docstring
+pycommons/coercion.py:71: [C0103, coerce_args.check_accepts.new_f._get_xargs] Invalid name "f" (should match [a-z_][a-z0-9_]{2,30}$)
+pycommons/coercion.py:71: [C0103, coerce_args.check_accepts.new_f._get_xargs] Invalid name "a" (should match [a-z_][a-z0-9_]{2,30}$)
+pycommons/coercion.py:71: [C0103, coerce_args.check_accepts.new_f._get_xargs] Invalid name "d" (should match [a-z_][a-z0-9_]{2,30}$)
+pycommons/coercion.py:71: [C0111, coerce_args.check_accepts.new_f._get_xargs] Missing docstring
+pycommons/coercion.py:71: [C0103, coerce_args.check_accepts.new_f._get_xargs] Invalid name "f" (should match [a-z_][a-z0-9_]{2,30}$)
+pycommons/coercion.py:71: [C0103, coerce_args.check_accepts.new_f._get_xargs] Invalid name "a" (should match [a-z_][a-z0-9_]{2,30}$)
+pycommons/coercion.py:71: [C0103, coerce_args.check_accepts.new_f._get_xargs] Invalid name "d" (should match [a-z_][a-z0-9_]{2,30}$)
+pycommons/coercion.py:72: [C0103, coerce_args.check_accepts.new_f._get_xargs] Invalid name "d" (should match [a-z_][a-z0-9_]{2,30}$)
+pycommons/coercion.py:73: [C0103, coerce_args.check_accepts.new_f._get_xargs] Invalid name "a" (should match [a-z_][a-z0-9_]{2,30}$)
+pycommons/coercion.py:79: [C0324, coerce_args.check_accepts.new_f._get_xargs] Comma not followed by a space
+                for i,x in enumerate(spec[0]):
+                     ^^
+pycommons/coercion.py:79: [C0103, coerce_args.check_accepts.new_f._get_xargs] Invalid name "x" (should match [a-z_][a-z0-9_]{2,30}$)
+pycommons/coercion.py:96: [W0142, coerce_args.check_accepts.new_f] Used * or ** magic
+pycommons/coercion.py:99: [W0142, coerce_args.check_accepts.new_f] Used * or ** magic
+pycommons/coercion.py:2: [W0611] Unused import izip
+pycommons/function.py:1: [C0111] Missing docstring
+pycommons/function.py:2: [C0322] Operator not preceded by a space
+__docformat__='restructuredtext'
+             ^
+pycommons/function.py:10: [C0324, compose.composed] Comma not followed by a space
+    def composed(*args,**kwargs):
+                      ^^
+pycommons/function.py:10: [C0111, compose.composed] Missing docstring
+pycommons/function.py:12: [C0103, compose.composed] Invalid name "f" (should match [a-z_][a-z0-9_]{2,30}$)
+pycommons/function.py:4: [W0613, compose] Unused argument 'kwargs'
+pycommons/validate.py:6: [C0301] Line too long (88/80)
+pycommons/validate.py:82: [W0311] Bad indentation. Found 12 spaces, expected 8
+pycommons/validate.py:103: [C0301] Line too long (83/80)
+pycommons/validate.py:110: [C0301] Line too long (84/80)
+pycommons/validate.py:9: [W0511] TODO esto deberia de estar en utils...
+pycommons/validate.py:1: [C0111] Missing docstring
+pycommons/validate.py:2: [C0322] Operator not preceded by a space
+__docformat__='restructuredtext'
+             ^
+pycommons/validate.py:7: [W0105] String statement has no effect
+pycommons/validate.py:12: [C0111, IllegalArgumentException] Missing docstring
+pycommons/validate.py:38: [W0622, no_none_elements] Redefining built-in 'iter'
+pycommons/validate.py:81: [C0103, is_subclass] Invalid name "e" (should match [a-z_][a-z0-9_]{2,30}$)
+pycommons/validate.py:81: [W0612, is_subclass] Unused variable 'e'
+pycommons/validate.py:99: [W0622, all_elements_of_type] Redefining built-in 'iter'
+pycommons/validate.py:106: [W0622, all_elements_subclass_of] Redefining built-in 'iter'
+pycommons/validate.py:114: [W0622, _validate_all_elements_with_condition] Redefining built-in 'iter'
+pycommons/validate.py:114: [C0103, _validate_all_elements_with_condition] Invalid name "_validate_all_elements_with_condition" (should match [a-z_][a-z0-9_]{2,30}$)
+pycommons/validate.py:114: [C0111, _validate_all_elements_with_condition] Missing docstring
+pycommons/transform.py:10: [C0301] Line too long (84/80)
+pycommons/transform.py:27: [C0301] Line too long (99/80)
+pycommons/transform.py:46: [C0301] Line too long (82/80)
+pycommons/transform.py:31: [C0322] Operator not preceded by a space
+__docformat__='restructuredtext'
+             ^
+pycommons/transform.py:34: [C0111, transform] Missing docstring
+pycommons/transform.py:45: [C0103, ifKey] Invalid name "ifKey" (should match [a-z_][a-z0-9_]{2,30}$)
+pycommons/transform.py:49: [W0102, constantCall] Dangerous default value [] as argument
+pycommons/transform.py:49: [W0102, constantCall] Dangerous default value {} as argument
+pycommons/transform.py:49: [C0103, constantCall] Invalid name "constantCall" (should match [a-z_][a-z0-9_]{2,30}$)
+pycommons/transform.py:49: [C0103, constantCall] Invalid name "fn" (should match [a-z_][a-z0-9_]{2,30}$)
+pycommons/transform.py:49: [C0103, constantCall] Invalid name "fn" (should match [a-z_][a-z0-9_]{2,30}$)
+pycommons/transform.py:56: [W0142, constantCall.<lambda>] Used * or ** magic
+pycommons/transform.py:58: [C0103, fromKey] Invalid name "fromKey" (should match [a-z_][a-z0-9_]{2,30}$)
+pycommons/transform.py:70: [C0103, transformWith] Invalid name "transformWith" (should match [a-z_][a-z0-9_]{2,30}$)
+pycommons/daemon.py:51: [C0111, Daemon.msg] Missing docstring
+pycommons/daemon.py:56: [C0103, Daemon.msgException] Invalid name "msgException" (should match [a-z_][a-z0-9_]{2,30}$)
+pycommons/daemon.py:56: [C0111, Daemon.msgException] Missing docstring
+pycommons/daemon.py:93: [C0111, Daemon.options_parser] Missing docstring
+pycommons/daemon.py:94: [C0103, Daemon.options_parser] Invalid name "p" (should match [a-z_][a-z0-9_]{2,30}$)
+pycommons/daemon.py:101: [C0324, Daemon.options_parser] Comma not followed by a space
+        p.add_option('-P','--pid', dest='pidfile',
+                         ^^
+                     action='store',
+                     help='Specify pidfile')
+pycommons/daemon.py:93: [R0201, Daemon.options_parser] Method could be a function
+pycommons/daemon.py:122: [C0103, Daemon.parse_options] Invalid name "e" (should match [a-z_][a-z0-9_]{2,30}$)
+pycommons/daemon.py:125: [C0321, Daemon.parse_options] More than one statement on a single line
+pycommons/daemon.py:127: [W0613, Daemon.on_sigterm] Unused argument 'signalnum'
+pycommons/daemon.py:127: [W0613, Daemon.on_sigterm] Unused argument 'frame'
+pycommons/daemon.py:127: [R0201, Daemon.on_sigterm] Method could be a function
+pycommons/daemon.py:187: [C0103, Daemon.stop] Invalid name "n" (should match [a-z_][a-z0-9_]{2,30}$)
+pycommons/daemon.py:187: [W0612, Daemon.stop] Unused variable 'n'
+pycommons/daemon.py:205: [C0103, Daemon.prepare_dirs] Invalid name "fn" (should match [a-z_][a-z0-9_]{2,30}$)
+pycommons/daemon.py:228: [C0103, Daemon.chown] Invalid name "fn" (should match [a-z_][a-z0-9_]{2,30}$)
+pycommons/daemon.py:228: [C0103, Daemon.chown] Invalid name "fn" (should match [a-z_][a-z0-9_]{2,30}$)
+pycommons/daemon.py:315: [W0621, Daemon.daemonize] Redefining name 'sys' from outer scope (line 40)
+pycommons/daemon.py:306: [W0212, Daemon.daemonize] Access to a protected member _exit of a client class
+pycommons/daemon.py:309: [W0212, Daemon.daemonize] Access to a protected member _exit of a client class
+pycommons/daemon.py:312: [C0322, Daemon.daemonize] Operator not preceded by a space
+        null=os.open('/dev/null', os.O_RDWR)
+            ^
+pycommons/daemon.py:315: [W0404, Daemon.daemonize] Reimport 'sys' (imported line 40)
+pycommons/daemon.py:320: [C0103, Daemon.daemonize] Invalid name "e" (should match [a-z_][a-z0-9_]{2,30}$)
+pycommons/daemon.py:301: [R0201, Daemon.daemonize] Method could be a function
+pycommons/daemon.py:121: [W0201, Daemon.parse_options] Attribute 'uid' defined outside __init__
+pycommons/daemon.py:118: [W0201, Daemon.parse_options] Attribute 'args' defined outside __init__
+pycommons/daemon.py:121: [W0201, Daemon.parse_options] Attribute 'gid' defined outside __init__
+pycommons/daemon.py:118: [W0201, Daemon.parse_options] Attribute 'options' defined outside __init__
+pycommons/daemon.py:119: [W0201, Daemon.parse_options] Attribute 'pidfile' defined outside __init__
+pycommons/daemon.py:374: [W0621, daemonize] Redefining name 'sys' from outer scope (line 40)
+pycommons/daemon.py:362: [W0212, daemonize] Access to a protected member _exit of a client class
+pycommons/daemon.py:365: [W0212, daemonize] Access to a protected member _exit of a client class
+pycommons/daemon.py:372: [C0322, daemonize] Operator not preceded by a space
+        null= os.open('/dev/null', os.O_RDWR)
+            ^
+pycommons/daemon.py:374: [W0404, daemonize] Reimport 'sys' (imported line 40)
+pycommons/daemon.py:379: [C0103, daemonize] Invalid name "e" (should match [a-z_][a-z0-9_]{2,30}$)
+pycommons/daemon.py:33: [W0611] Unused import ConfigParser
+pycommons/termcolors.py:35: [C0301] Line too long (85/80)
+pycommons/termcolors.py:41: [C0301] Line too long (89/80)
+pycommons/termcolors.py:35: [C0103] Invalid name "color_names" (should match (([A-Z_][A-Z0-9_]*)|(__.*__))$)
+pycommons/termcolors.py:36: [C0103] Invalid name "foreground" (should match (([A-Z_][A-Z0-9_]*)|(__.*__))$)
+pycommons/termcolors.py:37: [C0103] Invalid name "background" (should match (([A-Z_][A-Z0-9_]*)|(__.*__))$)
+pycommons/termcolors.py:41: [C0103] Invalid name "opt_dict" (should match (([A-Z_][A-Z0-9_]*)|(__.*__))$)
+pycommons/termcolors.py:76: [C0103, colorize] Invalid name "v" (should match [a-z_][a-z0-9_]{2,30}$)
+pycommons/termcolors.py:81: [C0103, colorize] Invalid name "o" (should match [a-z_][a-z0-9_]{2,30}$)
+pycommons/termcolors.py:98: [W0142, make_style.<lambda>] Used * or ** magic
+pycommons/exception.py:1: [C0111] Missing docstring
+pycommons/exception.py:5: [C0103, reraise_with_message] Invalid name "e" (should match [a-z_][a-z0-9_]{2,30}$)
+pycommons/exception.py:5: [C0103, reraise_with_message] Invalid name "e" (should match [a-z_][a-z0-9_]{2,30}$)
+pycommons/statistical_logging.py:43: [C0301] Line too long (81/80)
+pycommons/statistical_logging.py:129: [C0301] Line too long (86/80)
+pycommons/statistical_logging.py:1: [C0111] Missing docstring
+pycommons/statistical_logging.py:18: [W0702, StatisticalLogger.__new__] No exception type(s) specified
+pycommons/statistical_logging.py:16: [C0322, StatisticalLogger.__new__] Operator not preceded by a space
+            instances= cls.instances
+                     ^
+pycommons/statistical_logging.py:18: [C0322, StatisticalLogger.__new__] Operator not preceded by a space
+            cls.instances= []
+                         ^
+pycommons/statistical_logging.py:19: [C0322, StatisticalLogger.__new__] Operator not preceded by a space
+            instances= cls.instances
+                     ^
+pycommons/statistical_logging.py:22: [C0321, StatisticalLogger.__new__] More than one statement on a single line
+pycommons/statistical_logging.py:24: [C0322, StatisticalLogger.__new__] Operator not preceded by a space
+        new_instance= super(StatisticalLogger, cls).__new__(cls)
+                    ^
+pycommons/statistical_logging.py:28: [C0322, StatisticalLogger.__new__] Operator not preceded by a space
+        new_instance.logger= logger
+                           ^
+pycommons/statistical_logging.py:30: [C0322, StatisticalLogger.__new__] Operator not preceded by a space
+        new_instance.active_tasks= {}
+                                 ^
+pycommons/statistical_logging.py:32: [C0322, StatisticalLogger.__new__] Operator not preceded by a space
+        new_instance.task_stack= []
+                               ^
+pycommons/statistical_logging.py:41: [C0322, StatisticalLogger.begin_task] Operator not preceded by a space
+        starting_time= datetime.now()
+                     ^
+pycommons/statistical_logging.py:42: [C0322, StatisticalLogger.begin_task] Operator not preceded by a space
+        self.active_tasks[task]= starting_time
+                               ^
+pycommons/statistical_logging.py:93: [C0322, StatisticalLogger._task_finished] Operator not preceded by a space
+        ending_time= datetime.now()
+                   ^
+pycommons/statistical_logging.py:94: [C0322, StatisticalLogger._task_finished] Operator not preceded by a space
+        starting_time= self.active_tasks[task]
+                     ^
+pycommons/statistical_logging.py:95: [C0322, StatisticalLogger._task_finished] Operator not preceded by a space
+        duration= ending_time - starting_time
+                ^
+pycommons/statistical_logging.py:99: [C0322, StatisticalLogger._task_finished] Operator not preceded by a space
+        message= message % dict(task=task, duration=duration)
+               ^
+pycommons/statistical_logging.py:100: [C0322, StatisticalLogger._task_finished] Operator not preceded by a space
+        nparents= len(self.task_stack)
+                ^
+pycommons/statistical_logging.py:101: [C0324, StatisticalLogger._task_finished] Comma not followed by a space
+        logging_function("%s%s" % ('  '*nparents,message))
+                                                ^^
+pycommons/statistical_logging.py:105: [C0111, StatisticalLogger.debug] Missing docstring
+pycommons/statistical_logging.py:108: [C0111, StatisticalLogger.info] Missing docstring
+pycommons/statistical_logging.py:111: [C0111, StatisticalLogger.error] Missing docstring
+pycommons/statistical_logging.py:114: [C0111, StatisticalLogger.fatal] Missing docstring
+pycommons/statistical_logging.py:117: [C0111, StatisticalLogger.exception] Missing docstring
+pycommons/statistical_logging.py:120: [C0111, StatisticalLogger._log] Missing docstring
+pycommons/statistical_logging.py:121: [C0322, StatisticalLogger._log] Operator not preceded by a space
+        nparents= len(self.task_stack)
+                ^
+pycommons/statistical_logging.py:122: [C0322, StatisticalLogger._log] Operator not preceded by a space
+        msg= "%s%s" % ('  '*nparents, msg)
+           ^
+pycommons/statistical_logging.py:128: [C0111, StatisticalLogger.end_all_tasks] Missing docstring
+pycommons/statistical_logging.py:129: [C0322, StatisticalLogger.end_all_tasks] Operator not preceded by a space
+        tasks= sorted(self.active_tasks.iteritems(), key=lambda x:x[1], reverse= True)
+             ^
+pycommons/statistical_logging.py:130: [W0612, StatisticalLogger.end_all_tasks] Unused variable 'starting_time'
+pycommons/statistical_logging.py:133: [C0111, TaskContextManager] Missing docstring
+pycommons/statistical_logging.py:135: [C0322, TaskContextManager.__init__] Operator not preceded by a space
+        self.session= session
+                    ^
+pycommons/statistical_logging.py:136: [C0322, TaskContextManager.__init__] Operator not preceded by a space
+        self.logger= logger
+                   ^
+pycommons/statistical_logging.py:137: [C0322, TaskContextManager.__init__] Operator not preceded by a space
+        self.db_task= lambda task:db_task(task, self.session, self.logger)
+                    ^
+pycommons/statistical_logging.py:133: [R0903, TaskContextManager] Too few public methods (0/2)
+pycommons/statistical_logging.py:140: [C0111, db_task] Missing docstring
+pycommons/statistical_logging.py:148: [W0703, db_task] Catch "Exception"
+pycommons/statistical_logging.py:144: [C0322, db_task] Operator not preceded by a space
+        t= TaskState(logger)
+         ^
+pycommons/statistical_logging.py:144: [C0103, db_task] Invalid name "t" (should match [a-z_][a-z0-9_]{2,30}$)
+pycommons/statistical_logging.py:148: [C0103, db_task] Invalid name "e" (should match [a-z_][a-z0-9_]{2,30}$)
+pycommons/statistical_logging.py:152: [C0322, db_task] Operator not preceded by a space
+        t.error= Error('Failed on task %s' % task, ex)
+               ^
+pycommons/statistical_logging.py:148: [W0612, db_task] Unused variable 'e'
+pycommons/statistical_logging.py:156: [C0111, simple_task] Missing docstring
+pycommons/statistical_logging.py:159: [C0322, simple_task] Operator not preceded by a space
+        t= TaskState(logger)
+         ^
+pycommons/statistical_logging.py:159: [C0103, simple_task] Invalid name "t" (should match [a-z_][a-z0-9_]{2,30}$)
+pycommons/statistical_logging.py:162: [C0103, simple_task] Invalid name "e" (should match [a-z_][a-z0-9_]{2,30}$)
+pycommons/statistical_logging.py:167: [C0322, simple_task] Operator not preceded by a space
+        t.error= Error('Failed on task %s' % task, ex)
+               ^
+pycommons/statistical_logging.py:170: [C0111, TaskState] Missing docstring
+pycommons/statistical_logging.py:172: [C0322, TaskState.__init__] Operator not preceded by a space
+        self.error= None
+                  ^
+pycommons/statistical_logging.py:173: [C0322, TaskState.__init__] Operator not preceded by a space
+        self.logger= logger
+                   ^
+pycommons/statistical_logging.py:174: [C0322, TaskState.__init__] Operator not preceded by a space
+        self.subtask= lambda task:simple_task(task, logger)
+                    ^
+pycommons/statistical_logging.py:177: [C0111, TaskState.has_errors] Missing docstring
+pycommons/statistical_logging.py:181: [C0111, TaskState.reraise] Missing docstring
+pycommons/lazy.py:20: [C0301] Line too long (104/80)
+pycommons/lazy.py:21: [C0301] Line too long (106/80)
+pycommons/lazy.py:22: [C0301] Line too long (106/80)
+pycommons/lazy.py:42: [C0301] Line too long (93/80)
+pycommons/lazy.py:1: [C0111] Missing docstring
+pycommons/lazy.py:7: [C0103, lazy] Invalid name "f" (should match [a-z_][a-z0-9_]{2,30}$)
+pycommons/lazy.py:7: [C0111, lazy] Missing docstring
+pycommons/lazy.py:7: [C0103, lazy] Invalid name "f" (should match [a-z_][a-z0-9_]{2,30}$)
+pycommons/lazy.py:8: [C0111, lazy.new_f] Missing docstring
+pycommons/lazy.py:9: [C0322, lazy.new_f] Operator not preceded by a space
+        params= self.params.namespace_params(f.__name__)
+              ^
+pycommons/lazy.py:12: [C0322, lazy.new_f] Operator not preceded by a space
+                t0= time()
+                  ^
+pycommons/lazy.py:12: [C0103, lazy.new_f] Invalid name "t0" (should match [a-z_][a-z0-9_]{2,30}$)
+pycommons/lazy.py:13: [C0322, lazy.new_f] Operator not preceded by a space
+                result= f(self, **params)
+                      ^
+pycommons/lazy.py:13: [W0142, lazy.new_f] Used * or ** magic
+pycommons/lazy.py:15: [C0322, lazy.new_f] Operator not preceded by a space
+                cumtime= time() - t0
+                       ^
+pycommons/lazy.py:17: [C0322, lazy.new_f] Operator not preceded by a space
+                tottime= cumtime - get_children_time(self).get(f.__name__, 0)
+                       ^
+pycommons/lazy.py:19: [C0322, lazy.new_f] Operator not preceded by a space
+                logger= logging.getLogger(inspect.getmodule(self).__name__)
+                      ^
+pycommons/lazy.py:24: [C0322, lazy.new_f] Operator not preceded by a space
+                result= f(self, **params)
+                      ^
+pycommons/lazy.py:24: [W0142, lazy.new_f] Used * or ** magic
+pycommons/lazy.py:32: [C0111, get_children_time] Missing docstring
+pycommons/lazy.py:44: [C0322, subtract_parent] Operator not preceded by a space
+            self= frame.f_locals['self']
+                ^
+pycommons/lazy.py:45: [C0322, subtract_parent] Operator not preceded by a space
+            f= frame.f_locals['f']
+             ^
+pycommons/lazy.py:45: [C0103, subtract_parent] Invalid name "f" (should match [a-z_][a-z0-9_]{2,30}$)
+pycommons/lazy.py:46: [C0322, subtract_parent] Operator not preceded by a space
+            d= get_children_time(self)
+             ^
+pycommons/lazy.py:46: [C0103, subtract_parent] Invalid name "d" (should match [a-z_][a-z0-9_]{2,30}$)
+pycommons/lazy.py:47: [C0322, subtract_parent] Operator not preceded by a space
+            d[f.__name__]= d.get(f.__name__, 0) + cumtime
+                         ^
+pycommons/lazy.py:42: [W0612, subtract_parent] Unused variable 'src_context'
+pycommons/lazy.py:42: [W0612, subtract_parent] Unused variable 'src_context_pos'
+pycommons/lazy.py:42: [W0612, subtract_parent] Unused variable 'lineno'
+pycommons/lazy.py:42: [W0612, subtract_parent] Unused variable 'fname'
+pycommons/lazy.py:50: [C0103, _format_time] Invalid name "t" (should match [a-z_][a-z0-9_]{2,30}$)
+pycommons/lazy.py:50: [C0111, _format_time] Missing docstring
+pycommons/lazy.py:50: [C0103, _format_time] Invalid name "t" (should match [a-z_][a-z0-9_]{2,30}$)
+pycommons/lazy.py:51: [C0322, _format_time] Operator not preceded by a space
+    fmt= "%%.0%sf" % prec
+       ^
+pycommons/lazy.py:52: [C0322, _format_time] Operator not preceded by a space
+    threshold= 10**(-prec)
+             ^
+pycommons/lazy.py:59: [C0111, lazy_on] Missing docstring
+pycommons/lazy.py:60: [C0111, lazy_on.new_f] Missing docstring
+pycommons/lazy.py:62: [C0103, lazy_on.new_f] Invalid name "cf" (should match [a-z_][a-z0-9_]{2,30}$)
+pycommons/lazy.py:63: [C0321, lazy_on.new_f] More than one statement on a single line
+pycommons/lazy.py:68: [C0111, has_cache] Missing docstring
+pycommons/lazy.py:69: [C0322, has_cache] Operator not preceded by a space
+    attrname= ' %s' % func_name
+            ^
+pycommons/lazy.py:72: [C0111, get_cache] Missing docstring
+pycommons/lazy.py:73: [C0322, get_cache] Operator not preceded by a space
+    attrname= ' %s' % func_name
+            ^
+pycommons/lazy.py:76: [C0111, set_cache] Missing docstring
+pycommons/lazy.py:77: [C0322, set_cache] Operator not preceded by a space
+    attrname= ' %s' % func_name
+            ^
+pycommons/lazy.py:80: [C0103, lazy_property] Invalid name "f" (should match [a-z_][a-z0-9_]{2,30}$)
+pycommons/lazy.py:80: [C0111, lazy_property] Missing docstring
+pycommons/lazy.py:80: [C0103, lazy_property] Invalid name "f" (should match [a-z_][a-z0-9_]{2,30}$)
+pycommons/lazy.py:83: [C0111, lazy_property_on] Missing docstring
+pycommons/lazy.py:84: [C0103, lazy_property_on.new_f] Invalid name "f" (should match [a-z_][a-z0-9_]{2,30}$)
+pycommons/lazy.py:84: [C0111, lazy_property_on.new_f] Missing docstring
+pycommons/lazy.py:84: [C0103, lazy_property_on.new_f] Invalid name "f" (should match [a-z_][a-z0-9_]{2,30}$)
+pycommons/lazy.py:85: [W0142, lazy_property_on.new_f] Used * or ** magic
+pycommons/lazy.py:2: [W0611] Unused import sys
+pycommons/decorators.py:88: [W0311] Bad indentation. Found 7 spaces, expected 8
+pycommons/decorators.py:153: [C0301] Line too long (88/80)
+pycommons/decorators.py:1: [C0111] Missing docstring
+pycommons/decorators.py:2: [C0322] Operator not preceded by a space
+__docformat__='restructuredtext'
+             ^
+pycommons/decorators.py:7: [C0322] Operator not preceded by a space
+__all__=['retry','memo','DecoratorInjector', 'deprecated']
+       ^
+pycommons/decorators.py:9: [C0103, retry] Invalid name "maxRetries" (should match [a-z_][a-z0-9_]{2,30}$)
+pycommons/decorators.py:9: [C0103, retry] Invalid name "maxRetries" (should match [a-z_][a-z0-9_]{2,30}$)
+pycommons/decorators.py:15: [C0103, retry._doDecoration] Invalid name "_doDecoration" (should match [a-z_][a-z0-9_]{2,30}$)
+pycommons/decorators.py:15: [C0103, retry._doDecoration] Invalid name "fn" (should match [a-z_][a-z0-9_]{2,30}$)
+pycommons/decorators.py:15: [C0111, retry._doDecoration] Missing docstring
+pycommons/decorators.py:15: [C0103, retry._doDecoration] Invalid name "fn" (should match [a-z_][a-z0-9_]{2,30}$)
+pycommons/decorators.py:16: [C0103, retry._doDecoration._doRetry] Invalid name "_doRetry" (should match [a-z_][a-z0-9_]{2,30}$)
+pycommons/decorators.py:16: [C0111, retry._doDecoration._doRetry] Missing docstring
+pycommons/decorators.py:22: [C0323, retry._doDecoration._doRetry] Operator not followed by a space
+                    retries +=1
+                            ^^
+pycommons/decorators.py:35: [C0103, memo.decorator] Invalid name "f" (should match [a-z_][a-z0-9_]{2,30}$)
+pycommons/decorators.py:35: [C0111, memo.decorator] Missing docstring
+pycommons/decorators.py:35: [C0103, memo.decorator] Invalid name "f" (should match [a-z_][a-z0-9_]{2,30}$)
+pycommons/decorators.py:36: [C0324, memo.decorator] Comma not followed by a space
+        decoratee = Memo(qty,f)
+                            ^^
+pycommons/decorators.py:43: [C0103, Memo.__init__] Invalid name "fn" (should match [a-z_][a-z0-9_]{2,30}$)
+pycommons/decorators.py:40: [C0111, Memo] Missing docstring
+pycommons/decorators.py:41: [C0103, Memo.__init__] Invalid name "fn" (should match [a-z_][a-z0-9_]{2,30}$)
+pycommons/decorators.py:41: [C0103, Memo.__init__] Invalid name "fn" (should match [a-z_][a-z0-9_]{2,30}$)
+pycommons/decorators.py:45: [C0324, Memo.__call__] Comma not followed by a space
+    def __call__(self,*args,**kwargs):
+                     ^^
+pycommons/decorators.py:46: [C0324, Memo.__call__] Comma not followed by a space
+        key = (args,kwargs)
+                   ^^
+pycommons/decorators.py:48: [C0103, Memo.__call__] Invalid name "retValue" (should match [a-z_][a-z0-9_]{2,30}$)
+pycommons/decorators.py:50: [C0324, Memo.__call__] Comma not followed by a space
+            retValue = self.fn(*args,**kwargs)
+                                    ^^
+pycommons/decorators.py:50: [C0103, Memo.__call__] Invalid name "retValue" (should match [a-z_][a-z0-9_]{2,30}$)
+pycommons/decorators.py:54: [C0111, Memo.clear] Missing docstring
+pycommons/decorators.py:56: [C0103, Memo.showCache] Invalid name "showCache" (should match [a-z_][a-z0-9_]{2,30}$)
+pycommons/decorators.py:56: [C0111, Memo.showCache] Missing docstring
+pycommons/decorators.py:60: [C0111, FixedSizeCache] Missing docstring
+pycommons/decorators.py:64: [C0324, FixedSizeCache.__getitem__] Comma not followed by a space
+    def __getitem__(self,key):
+                        ^^
+pycommons/decorators.py:65: [C0324, FixedSizeCache.__getitem__] Comma not followed by a space
+        for k,v in self.values:
+             ^^
+pycommons/decorators.py:65: [C0103, FixedSizeCache.__getitem__] Invalid name "v" (should match [a-z_][a-z0-9_]{2,30}$)
+pycommons/decorators.py:69: [C0324, FixedSizeCache.__setitem__] Comma not followed by a space
+    def __setitem__(self,key,value):
+                        ^^
+pycommons/decorators.py:70: [C0324, FixedSizeCache.__setitem__] Comma not followed by a space
+        self.values.append((key,value))
+                               ^^
+pycommons/decorators.py:73: [C0324, FixedSizeCache.__contains__] Comma not followed by a space
+    def __contains__(self,key):
+                         ^^
+pycommons/decorators.py:74: [C0324, FixedSizeCache.__contains__] Comma not followed by a space
+        for k,v in self.values:
+             ^^
+pycommons/decorators.py:74: [C0103, FixedSizeCache.__contains__] Invalid name "v" (should match [a-z_][a-z0-9_]{2,30}$)
+pycommons/decorators.py:74: [W0612, FixedSizeCache.__contains__] Unused variable 'v'
+pycommons/decorators.py:78: [C0324, FixedSizeCache.__delitem__] Comma not followed by a space
+    def __delitem__(self,key):
+                        ^^
+pycommons/decorators.py:84: [C0111, FixedSizeCache.keys] Missing docstring
+pycommons/decorators.py:85: [C0324, FixedSizeCache.keys] Comma not followed by a space
+        return [k for k,v in self.values]
+                       ^^
+pycommons/decorators.py:85: [W0612, FixedSizeCache.keys] Unused variable 'v'
+pycommons/decorators.py:87: [C0111, FixedSizeCache.clear] Missing docstring
+pycommons/decorators.py:120: [C0103, DecoratorInjector.decorate] Invalid name "codePoint" (should match [a-z_][a-z0-9_]{2,30}$)
+pycommons/decorators.py:120: [C0103, DecoratorInjector.decorate] Invalid name "decoratorFn" (should match [a-z_][a-z0-9_]{2,30}$)
+pycommons/decorators.py:120: [C0111, DecoratorInjector.decorate] Missing docstring
+pycommons/decorators.py:120: [C0103, DecoratorInjector.decorate] Invalid name "codePoint" (should match [a-z_][a-z0-9_]{2,30}$)
+pycommons/decorators.py:120: [C0103, DecoratorInjector.decorate] Invalid name "decoratorFn" (should match [a-z_][a-z0-9_]{2,30}$)
+pycommons/decorators.py:122: [C0103, DecoratorInjector.decorate] Invalid name "fn" (should match [a-z_][a-z0-9_]{2,30}$)
+pycommons/decorators.py:120: [R0201, DecoratorInjector.decorate] Method could be a function
+pycommons/decorators.py:91: [R0903, DecoratorInjector] Too few public methods (1/2)
+pycommons/decorators.py:128: [C0103, deprecated] Invalid name "f" (should match [a-z_][a-z0-9_]{2,30}$)
+pycommons/decorators.py:128: [C0103, deprecated] Invalid name "f" (should match [a-z_][a-z0-9_]{2,30}$)
+pycommons/decorators.py:155: [C0111, deprecated.new_f] Missing docstring
+pycommons/params.py:11: [C0301] Line too long (116/80)
+pycommons/params.py:1: [C0111] Missing docstring
+pycommons/params.py:3: [C0111, Params] Missing docstring
+pycommons/params.py:4: [C0111, Params.override] Missing docstring
+pycommons/params.py:5: [C0322, Params.override] Operator not preceded by a space
+        res= Params(self)
+           ^
+pycommons/params.py:9: [C0111, Params.namespace_params] Missing docstring
+pycommons/params.py:10: [C0322, Params.namespace_params] Operator not preceded by a space
+        namespace= '%s.' % namespace
+                 ^
+pycommons/test.py:22: [W0511] TODO Add Tolerance
+pycommons/test.py:1: [C0111] Missing docstring
+pycommons/test.py:2: [C0322] Operator not preceded by a space
+__docformat__='restructuredtext'
+             ^
+pycommons/test.py:7: [C0111, DurationError] Missing docstring
+pycommons/test.py:7: [C0321, DurationError] More than one statement on a single line
+pycommons/test.py:14: [C0111, time_constrained._timedtest] Missing docstring
+pycommons/test.py:16: [C0111, time_constrained._timedtest.wrapper] Missing docstring
+pycommons/errors.py:5: [C0322] Operator not preceded by a space
+__docformat__='restructuredtext'
+             ^
+pycommons/errors.py:26: [W0622, Error.pprint] Redefining built-in 'file'
+pycommons/errors.py:26: [C0111, Error.pprint] Missing docstring
+pycommons/errors.py:28: [C0324, Error.pprint] Comma not followed by a space
+        traceback.print_exception(ex[0],ex[1],ex[2],file=file)
+                                       ^^
+pycommons/errors.py:30: [C0103, Error.getException] Invalid name "getException" (should match [a-z_][a-z0-9_]{2,30}$)
+pycommons/errors.py:30: [C0111, Error.getException] Missing docstring
+pycommons/errors.py:36: [C0103, ErrorCollector.__init__] Invalid name "errorList" (should match [a-z_][a-z0-9_]{2,30}$)
+pycommons/errors.py:34: [C0111, ErrorCollector] Missing docstring
+pycommons/errors.py:38: [C0103, ErrorCollector.addError] Invalid name "addError" (should match [a-z_][a-z0-9_]{2,30}$)
+pycommons/errors.py:38: [C0111, ErrorCollector.addError] Missing docstring
+pycommons/errors.py:41: [C0103, ErrorCollector.getErrors] Invalid name "getErrors" (should match [a-z_][a-z0-9_]{2,30}$)
+pycommons/errors.py:41: [C0111, ErrorCollector.getErrors] Missing docstring
+pycommons/errors.py:44: [C0103, ErrorCollector.hasErrors] Invalid name "hasErrors" (should match [a-z_][a-z0-9_]{2,30}$)
+pycommons/errors.py:44: [C0111, ErrorCollector.hasErrors] Missing docstring
+pycommons/kitten_rescue.py:69: [W0511] TODO: Compatibility with content-encoding: gzip or deflate
+pycommons/kitten_rescue.py:149: [W0511] TODO: check that this implementation complies:
+pycommons/kitten_rescue.py:165: [W0511] XXX check this
+pycommons/kitten_rescue.py:179: [W0511] TODO: also append html_encoding (based on content-type meta tag)
+pycommons/kitten_rescue.py:16: [C0103] Invalid name "logger" (should match (([A-Z_][A-Z0-9_]*)|(__.*__))$)
+pycommons/kitten_rescue.py:75: [W0622, KittenRescue.decode] Redefining built-in 'type'
+pycommons/kitten_rescue.py:114: [W0703, KittenRescue._parse_http_content_type] Catch "Exception"
+pycommons/kitten_rescue.py:108: [R0201, KittenRescue._parse_http_content_type] Method could be a function
+pycommons/kitten_rescue.py:117: [W0622, KittenRescue._get_codec_fallbacks] Redefining built-in 'type'
+pycommons/kitten_rescue.py:117: [C0111, KittenRescue._get_codec_fallbacks] Missing docstring
+pycommons/kitten_rescue.py:173: [W0703, KittenRescue.sniff_encoding] Catch "Exception"
+pycommons/string.py:1: [C0111] Missing docstring
+pycommons/string.py:2: [C0322] Operator not preceded by a space
+__docformat__='restructuredtext'
+             ^
+pycommons/string.py:6: [C0103, canonize] Invalid name "s" (should match [a-z_][a-z0-9_]{2,30}$)
+pycommons/string.py:6: [C0111, canonize] Missing docstring
+pycommons/string.py:6: [C0103, canonize] Invalid name "s" (should match [a-z_][a-z0-9_]{2,30}$)
+pycommons/string.py:9: [C0111, StringCanonizer] Missing docstring
+pycommons/string.py:14: [C0103, StringCanonizer.canonize] Invalid name "s" (should match [a-z_][a-z0-9_]{2,30}$)
+pycommons/string.py:14: [C0111, StringCanonizer.canonize] Missing docstring
+pycommons/string.py:14: [C0103, StringCanonizer.canonize] Invalid name "s" (should match [a-z_][a-z0-9_]{2,30}$)
+pycommons/string.py:16: [C0103, StringCanonizer.canonize] Invalid name "s" (should match [a-z_][a-z0-9_]{2,30}$)
+pycommons/string.py:18: [C0103, StringCanonizer.canonize] Invalid name "s" (should match [a-z_][a-z0-9_]{2,30}$)
+pycommons/string.py:19: [C0103, StringCanonizer.canonize] Invalid name "s" (should match [a-z_][a-z0-9_]{2,30}$)
+pycommons/string.py:20: [C0103, StringCanonizer.canonize] Invalid name "s" (should match [a-z_][a-z0-9_]{2,30}$)
+pycommons/string.py:9: [R0903, StringCanonizer] Too few public methods (1/2)
+pycommons/observable.py:39: [W0311] Bad indentation. Found 9 spaces, expected 8
+pycommons/observable.py:1: [C0111] Missing docstring
+pycommons/observable.py:2: [C0322] Operator not preceded by a space
+__docformat__='restructuredtext'
+             ^
+pycommons/observable.py:8: [C0103] Invalid name "logger" (should match (([A-Z_][A-Z0-9_]*)|(__.*__))$)
+pycommons/observable.py:15: [C0103, Observable.__init__] Invalid name "_fireEvent" (should match [a-z_][a-z0-9_]{2,30}$)
+pycommons/observable.py:10: [C0111, Observable] Missing docstring
+pycommons/observable.py:17: [C0103, Observable.addListener] Invalid name "addListener" (should match [a-z_][a-z0-9_]{2,30}$)
+pycommons/observable.py:17: [C0111, Observable.addListener] Missing docstring
+pycommons/observable.py:22: [C0111, Observable.add_listener] Missing docstring
+pycommons/observable.py:25: [C0103, Observable.removeListener] Invalid name "removeListener" (should match [a-z_][a-z0-9_]{2,30}$)
+pycommons/observable.py:25: [C0111, Observable.removeListener] Missing docstring
+pycommons/observable.py:30: [C0111, Observable.remove_listener] Missing docstring
+pycommons/observable.py:33: [E0202, Observable._fireEvent] An attribute inherited from Observable hide this method
+pycommons/observable.py:33: [C0103, Observable._fireEvent] Invalid name "_fireEvent" (should match [a-z_][a-z0-9_]{2,30}$)
+pycommons/observable.py:33: [C0111, Observable._fireEvent] Missing docstring
+pycommons/observable.py:38: [C0103, Observable._fireEvent_withOutSelf] Invalid name "_fireEvent_withOutSelf" (should match [a-z_][a-z0-9_]{2,30}$)
+pycommons/observable.py:38: [C0111, Observable._fireEvent_withOutSelf] Missing docstring
+pycommons/observable.py:45: [C0103, Observable._fireEvent_withIgnoreFailures] Invalid name "_fireEvent_withIgnoreFailures" (should match [a-z_][a-z0-9_]{2,30}$)
+pycommons/observable.py:45: [C0111, Observable._fireEvent_withIgnoreFailures] Missing docstring
+pycommons/observable.py:50: [W0703, Observable._fireEvent_withIgnoreFailures] Catch "Exception"
+pycommons/observable.py:50: [C0103, Observable._fireEvent_withIgnoreFailures] Invalid name "e" (should match [a-z_][a-z0-9_]{2,30}$)
+pycommons/observable.py:50: [W0612, Observable._fireEvent_withIgnoreFailures] Unused variable 'e'
+pycommons/urlfetcher.py:183: [C0301] Line too long (85/80)
+pycommons/urlfetcher.py:331: [C0301] Line too long (139/80)
+pycommons/urlfetcher.py:332: [C0301] Line too long (131/80)
+pycommons/urlfetcher.py:429: [C0301] Line too long (93/80)
+pycommons/urlfetcher.py:454: [W0511] XXX
+pycommons/urlfetcher.py:101: [W0231, AlwaysExistsUrlFetcher.__init__] __init__ method from base class 'UrlFetcher' is not called
+pycommons/urlfetcher.py:134: [R0913, UrllibUrlFetcher.__init__] Too many arguments (10/5)
+pycommons/urlfetcher.py:134: [W0231, UrllibUrlFetcher.__init__] __init__ method from base class 'UrlFetcher' is not called
+pycommons/urlfetcher.py:134: [W0102, UrllibUrlFetcher.__init__] Dangerous default value [] as argument
+pycommons/urlfetcher.py:134: [W0102, UrllibUrlFetcher.__init__] Dangerous default value [] as argument
+pycommons/urlfetcher.py:189: [E1101, UrllibUrlFetcher.__init__] Instance of 'ParseResult' has no 'scheme' member
+pycommons/urlfetcher.py:189: [E1101, UrllibUrlFetcher.__init__] Instance of 'ParseResult' has no 'netloc' member
+pycommons/urlfetcher.py:196: [E1101, UrllibUrlFetcher.__init__] Instance of 'ParseResult' has no 'scheme' member
+pycommons/urlfetcher.py:197: [E1101, UrllibUrlFetcher.__init__] Instance of 'ParseResult' has no 'scheme' member
+pycommons/urlfetcher.py:134: [W0613, UrllibUrlFetcher.__init__] Unused argument 'kwargs'
+pycommons/urlfetcher.py:199: [W0221, UrllibUrlFetcher.exists] Arguments number differs from overridden method
+pycommons/urlfetcher.py:199: [W0102, UrllibUrlFetcher.exists] Dangerous default value [] as argument
+pycommons/urlfetcher.py:216: [C0103, UrllibUrlFetcher.exists] Invalid name "e" (should match [a-z_][a-z0-9_]{2,30}$)
+pycommons/urlfetcher.py:329: [C0111, UrllibUrlFetcher._user_agent] Missing docstring
+pycommons/urlfetcher.py:330: [C0322, UrllibUrlFetcher._user_agent] Operator not preceded by a space
+        useragents= ['Opera/9.64(Windows NT 5.1; U; en) Presto/2.1.1',
+                  ^
+                     'Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US) AppleWebKit/525.13 (KHTML, like Gecko) Chrome/0.A.B.C Safari/525.13',
+                     'Mozilla/5.0 (X11; U; Linux x86_64; en-US; rv:1.9.0.13) Gecko/2009080315 Ubuntu/9.04 (jaunty) Firefox/3.0.13']
+pycommons/urlfetcher.py:329: [R0201, UrllibUrlFetcher._user_agent] Method could be a function
+pycommons/urlfetcher.py:355: [C0103, UrllibUrlFetcher._create_headers] Invalid name "v" (should match [a-z_][a-z0-9_]{2,30}$)
+pycommons/urlfetcher.py:375: [C0111, CacheUrllibUrlFetcher] Missing docstring
+pycommons/urlfetcher.py:376: [C0322, CacheUrllibUrlFetcher] Operator not preceded by a space
+    politeness_dict= {}
+                   ^
+pycommons/urlfetcher.py:377: [C0322, CacheUrllibUrlFetcher] Operator not preceded by a space
+    times= {'www.google.es': 5}
+         ^
+pycommons/urlfetcher.py:378: [C0322, CacheUrllibUrlFetcher] Operator not preceded by a space
+    do_sleep= True
+            ^
+pycommons/urlfetcher.py:382: [C0322, CacheUrllibUrlFetcher.__init__] Operator not preceded by a space
+        self.cache_dir= kwargs['cache_dir']
+                      ^
+pycommons/urlfetcher.py:386: [C0111, CacheUrllibUrlFetcher._load_cache_dict] Missing docstring
+pycommons/urlfetcher.py:387: [C0322, CacheUrllibUrlFetcher._load_cache_dict] Operator not preceded by a space
+        cache_fname= self._cache_fname()
+                   ^
+pycommons/urlfetcher.py:391: [W0703, CacheUrllibUrlFetcher._load_cache_dict] Catch "Exception"
+pycommons/urlfetcher.py:389: [C0103, CacheUrllibUrlFetcher._load_cache_dict] Invalid name "f" (should match [a-z_][a-z0-9_]{2,30}$)
+pycommons/urlfetcher.py:390: [C0322, CacheUrllibUrlFetcher._load_cache_dict] Operator not preceded by a space
+                self.cache_dict= json.load(f)
+                               ^
+pycommons/urlfetcher.py:391: [C0103, CacheUrllibUrlFetcher._load_cache_dict] Invalid name "e" (should match [a-z_][a-z0-9_]{2,30}$)
+pycommons/urlfetcher.py:392: [C0322, CacheUrllibUrlFetcher._load_cache_dict] Operator not preceded by a space
+            self.cache_dict= {}
+                           ^
+pycommons/urlfetcher.py:391: [W0612, CacheUrllibUrlFetcher._load_cache_dict] Unused variable 'e'
+pycommons/urlfetcher.py:394: [C0111, CacheUrllibUrlFetcher._get_cache] Missing docstring
+pycommons/urlfetcher.py:397: [C0111, CacheUrllibUrlFetcher._has_cache] Missing docstring
+pycommons/urlfetcher.py:400: [C0111, CacheUrllibUrlFetcher._cache_fname] Missing docstring
+pycommons/urlfetcher.py:402: [C0322, CacheUrllibUrlFetcher._cache_fname] Operator not preceded by a space
+            cache_entry= quote_plus(self.url.encode('utf8'))
+                       ^
+pycommons/urlfetcher.py:404: [C0322, CacheUrllibUrlFetcher._cache_fname] Operator not preceded by a space
+            cache_entry= quote_plus(self.url)
+                       ^
+pycommons/urlfetcher.py:406: [C0322, CacheUrllibUrlFetcher._cache_fname] Operator not preceded by a space
+            cache_entry= hashlib.md5(cache_entry).hexdigest()
+                       ^
+pycommons/urlfetcher.py:406: [E1101, CacheUrllibUrlFetcher._cache_fname] Module 'hashlib' has no 'md5' member
+pycommons/urlfetcher.py:407: [C0322, CacheUrllibUrlFetcher._cache_fname] Operator not preceded by a space
+        cache_fname= os.path.join(self.cache_dir, cache_entry)
+                   ^
+pycommons/urlfetcher.py:411: [C0111, CacheUrllibUrlFetcher._save_cache] Missing docstring
+pycommons/urlfetcher.py:412: [C0322, CacheUrllibUrlFetcher._save_cache] Operator not preceded by a space
+        self.cache_dict[key]= val
+                            ^
+pycommons/urlfetcher.py:413: [C0322, CacheUrllibUrlFetcher._save_cache] Operator not preceded by a space
+        cache_fname= self._cache_fname()
+                   ^
+pycommons/urlfetcher.py:414: [C0322, CacheUrllibUrlFetcher._save_cache] Operator not preceded by a space
+        tmp= tempfile.mktemp()
+           ^
+pycommons/urlfetcher.py:416: [C0103, CacheUrllibUrlFetcher._save_cache] Invalid name "f" (should match [a-z_][a-z0-9_]{2,30}$)
+pycommons/urlfetcher.py:419: [C0103, CacheUrllibUrlFetcher._save_cache] Invalid name "e" (should match [a-z_][a-z0-9_]{2,30}$)
+pycommons/urlfetcher.py:423: [C0111, CacheUrllibUrlFetcher._sleep] Missing docstring
+pycommons/urlfetcher.py:424: [C0321, CacheUrllibUrlFetcher._sleep] More than one statement on a single line
+pycommons/urlfetcher.py:425: [C0321, CacheUrllibUrlFetcher._sleep] More than one statement on a single line
+pycommons/urlfetcher.py:426: [C0322, CacheUrllibUrlFetcher._sleep] Operator not preceded by a space
+        netloc= urlparse(url).netloc
+              ^
+pycommons/urlfetcher.py:426: [E1101, CacheUrllibUrlFetcher._sleep] Instance of 'ParseResult' has no 'netloc' member
+pycommons/urlfetcher.py:428: [C0322, CacheUrllibUrlFetcher._sleep] Operator not preceded by a space
+            t= self.times.get(netloc, 1)
+             ^
+pycommons/urlfetcher.py:428: [C0103, CacheUrllibUrlFetcher._sleep] Invalid name "t" (should match [a-z_][a-z0-9_]{2,30}$)
+pycommons/urlfetcher.py:429: [C0322, CacheUrllibUrlFetcher._sleep] Operator not preceded by a space
+            to_sleep= max(normalvariate(t, t),t ) -  (time() - self.politeness_dict[netloc] )
+                    ^
+pycommons/urlfetcher.py:434: [C0322, CacheUrllibUrlFetcher._sleep] Operator not preceded by a space
+        self.politeness_dict[netloc]= time()
+                                    ^
+pycommons/urlfetcher.py:446: [W0622, CacheUrllibUrlFetcher._process] Redefining built-in 'format'
+pycommons/urlfetcher.py:437: [C0111, CacheUrllibUrlFetcher._process] Missing docstring
+pycommons/urlfetcher.py:441: [C0322, CacheUrllibUrlFetcher._process] Operator not preceded by a space
+            res= getattr(super(CacheUrllibUrlFetcher, self), func_name)()
+               ^
+pycommons/urlfetcher.py:444: [C0103, CacheUrllibUrlFetcher._process] Invalid name "e" (should match [a-z_][a-z0-9_]{2,30}$)
+pycommons/urlfetcher.py:445: [C0322, CacheUrllibUrlFetcher._process] Operator not preceded by a space
+                success= False
+                       ^
+pycommons/urlfetcher.py:451: [W0703, CacheUrllibUrlFetcher._process] Catch "Exception"
+pycommons/urlfetcher.py:448: [C0322, CacheUrllibUrlFetcher._process] Operator not preceded by a space
+                        res= res.decode(format)
+                           ^
+pycommons/urlfetcher.py:450: [C0322, CacheUrllibUrlFetcher._process] Operator not preceded by a space
+                        success= True
+                               ^
+pycommons/urlfetcher.py:451: [C0103, CacheUrllibUrlFetcher._process] Invalid name "e2" (should match [a-z_][a-z0-9_]{2,30}$)
+pycommons/urlfetcher.py:451: [C0321, CacheUrllibUrlFetcher._process] More than one statement on a single line
+pycommons/urlfetcher.py:452: [C0321, CacheUrllibUrlFetcher._process] More than one statement on a single line
+pycommons/urlfetcher.py:453: [C0103, CacheUrllibUrlFetcher._process] Invalid name "e" (should match [a-z_][a-z0-9_]{2,30}$)
+pycommons/urlfetcher.py:451: [W0612, CacheUrllibUrlFetcher._process] Unused variable 'e2'
+pycommons/urlfetcher.py:467: [W0221, CacheUrllibUrlFetcher.exists] Arguments number differs from overridden method
+pycommons/urlfetcher.py:392: [W0201, CacheUrllibUrlFetcher._load_cache_dict] Attribute 'cache_dict' defined outside __init__
+pycommons/urlfetcher.py:476: [R0913, NoTimeOutUrlFetcher.__init__] Too many arguments (6/5)
+pycommons/sync.py:32: [C0322] Operator not preceded by a space
+__docformat__='restructuredtext'
+             ^
+pycommons/sync.py:38: [R0903, Synchronized] Too few public methods (0/2)
+pycommons/sync.py:49: [C0103, synchronized] Invalid name "fn" (should match [a-z_][a-z0-9_]{2,30}$)
+pycommons/sync.py:49: [C0103, synchronized] Invalid name "fn" (should match [a-z_][a-z0-9_]{2,30}$)
+pycommons/sync.py:54: [C0111, synchronized._do] Missing docstring
+pycommons/sync.py:55: [W0212, synchronized._do] Access to a protected member _lock of a client class
+pycommons/sync.py:60: [W0212, synchronized._do] Access to a protected member _lock of a client class
+pycommons/dict_comparator.py:50: [C0301] Line too long (81/80)
+pycommons/dict_comparator.py:62: [C0301] Line too long (87/80)
+pycommons/dict_comparator.py:22: [W0231, DictComparator.__init__] __init__ method from base class 'TestCase' is not called
+pycommons/dict_comparator.py:22: [W0613, DictComparator.__init__] Unused argument 'args'
+pycommons/dict_comparator.py:22: [W0613, DictComparator.__init__] Unused argument 'kwargs'
+pycommons/dict_comparator.py:9: [R0904, DictComparator] Too many public methods (46/20)
+pycommons/math.py:5: [W0622] Redefining built-in 'pow'
+pycommons/math.py:1: [C0111] Missing docstring
+pycommons/math.py:3: [C0322] Operator not preceded by a space
+__docformat__='restructuredtext'
+             ^
+pycommons/math.py:5: [W0401] Wildcard import math
+pycommons/math.py:5: [W0614] Unused import pow from wildcard import
+pycommons/math.py:5: [W0614] Unused import fsum from wildcard import
+pycommons/math.py:5: [W0614] Unused import cosh from wildcard import
+pycommons/math.py:5: [W0614] Unused import ldexp from wildcard import
+pycommons/math.py:5: [W0614] Unused import hypot from wildcard import
+pycommons/math.py:5: [W0614] Unused import acosh from wildcard import
+pycommons/math.py:5: [W0614] Unused import tan from wildcard import
+pycommons/math.py:5: [W0614] Unused import asin from wildcard import
+pycommons/math.py:5: [W0614] Unused import isnan from wildcard import
+pycommons/math.py:5: [W0614] Unused import log from wildcard import
+pycommons/math.py:5: [W0614] Unused import fabs from wildcard import
+pycommons/math.py:5: [W0614] Unused import floor from wildcard import
+pycommons/math.py:5: [W0614] Unused import atanh from wildcard import
+pycommons/math.py:5: [W0614] Unused import lgamma from wildcard import
+pycommons/math.py:5: [W0614] Unused import frexp from wildcard import
+pycommons/math.py:5: [W0614] Unused import degrees from wildcard import
+pycommons/math.py:5: [W0614] Unused import pi from wildcard import
+pycommons/math.py:5: [W0614] Unused import log10 from wildcard import
+pycommons/math.py:5: [W0614] Unused import sin from wildcard import
+pycommons/math.py:5: [W0614] Unused import asinh from wildcard import
+pycommons/math.py:5: [W0614] Unused import modf from wildcard import
+pycommons/math.py:5: [W0614] Unused import atan from wildcard import
+pycommons/math.py:5: [W0614] Unused import factorial from wildcard import
+pycommons/math.py:5: [W0614] Unused import copysign from wildcard import
+pycommons/math.py:5: [W0614] Unused import expm1 from wildcard import
+pycommons/math.py:5: [W0614] Unused import ceil from wildcard import
+pycommons/math.py:5: [W0614] Unused import isinf from wildcard import
+pycommons/math.py:5: [W0614] Unused import sinh from wildcard import
+pycommons/math.py:5: [W0614] Unused import trunc from wildcard import
+pycommons/math.py:5: [W0614] Unused import cos from wildcard import
+pycommons/math.py:5: [W0614] Unused import e from wildcard import
+pycommons/math.py:5: [W0614] Unused import tanh from wildcard import
+pycommons/math.py:5: [W0614] Unused import radians from wildcard import
+pycommons/math.py:5: [W0614] Unused import atan2 from wildcard import
+pycommons/math.py:5: [W0614] Unused import erf from wildcard import
+pycommons/math.py:5: [W0614] Unused import erfc from wildcard import
+pycommons/math.py:5: [W0614] Unused import fmod from wildcard import
+pycommons/math.py:5: [W0614] Unused import exp from wildcard import
+pycommons/math.py:5: [W0614] Unused import acos from wildcard import
+pycommons/math.py:5: [W0614] Unused import log1p from wildcard import
+pycommons/math.py:5: [W0614] Unused import gamma from wildcard import
+pycommons/generic_dispatcher.py:1: [C0111] Missing docstring
+pycommons/generic_dispatcher.py:3: [C0111, GenericDispatcher] Missing docstring
+pycommons/generic_dispatcher.py:9: [C0324, GenericDispatcher.__call__] Comma not followed by a space
+        for cond,answer in self.conditions.iteritems():
+                ^^
+pycommons/generic_dispatcher.py:11: [C0324, GenericDispatcher.__call__] Comma not followed by a space
+                if isinstance(answer,basestring):
+                                    ^^
+pycommons/generic_dispatcher.py:12: [C0324, GenericDispatcher.__call__] Comma not followed by a space
+                    return getattr(self,answer)
+                                       ^^
+pycommons/generic_dispatcher.py:3: [R0903, GenericDispatcher] Too few public methods (0/2)
+pycommons/version_providers.py:1: [C0111] Missing docstring
+pycommons/version_providers.py:3: [R0903, VersionProvider] Too few public methods (1/2)
+pycommons/version_providers.py:21: [W0231, PackageResourcesVersionProvider.__init__] __init__ method from base class 'VersionProvider' is not called
+pycommons/version_providers.py:15: [R0903, PackageResourcesVersionProvider] Too few public methods (1/2)
+pycommons/decorators.py:60: [R0921, FixedSizeCache] Abstract class not referenced
+pycommons/version_providers.py:3: [R0922, VersionProvider] Abstract class is only referenced 1 times
+
+
+Report
+======
+1592 statements analysed.
+
+Raw metrics
+-----------
+
++----------+-------+------+---------+-----------+
+|type      |number |%     |previous |difference |
++==========+=======+======+=========+===========+
+|code      |1689   |56.36 |1689     |=          |
++----------+-------+------+---------+-----------+
+|docstring |934    |31.16 |934      |=          |
++----------+-------+------+---------+-----------+
+|comment   |106    |3.54  |106      |=          |
++----------+-------+------+---------+-----------+
+|empty     |268    |8.94  |268      |=          |
++----------+-------+------+---------+-----------+
+
+
+
+Messages by category
+--------------------
+
++-----------+-------+---------+-----------+
+|type       |number |previous |difference |
++===========+=======+=========+===========+
+|convention |468    |468      |=          |
++-----------+-------+---------+-----------+
+|refactor   |25     |25       |=          |
++-----------+-------+---------+-----------+
+|warning    |167    |167      |=          |
++-----------+-------+---------+-----------+
+|error      |9      |9        |=          |
++-----------+-------+---------+-----------+
+
+
+
+% errors / warnings by module
+-----------------------------
+
++------------------------------+------+--------+---------+-----------+
+|module                        |error |warning |refactor |convention |
++==============================+======+========+=========+===========+
+|pycommons.urlfetcher          |66.67 |8.98    |12.00    |10.68      |
++------------------------------+------+--------+---------+-----------+
+|pycommons.collections         |11.11 |13.17   |8.00     |7.91       |
++------------------------------+------+--------+---------+-----------+
+|pycommons.observable          |11.11 |1.80    |0.00     |3.85       |
++------------------------------+------+--------+---------+-----------+
+|pycommons.alexa_api           |11.11 |0.60    |8.00     |2.35       |
++------------------------------+------+--------+---------+-----------+
+|pycommons.math                |0.00  |25.75   |0.00     |0.43       |
++------------------------------+------+--------+---------+-----------+
+|pycommons.daemon              |0.00  |10.18   |12.00    |3.42       |
++------------------------------+------+--------+---------+-----------+
+|pycommons.iterable            |0.00  |7.19    |0.00     |7.48       |
++------------------------------+------+--------+---------+-----------+
+|pycommons.kitten_rescue       |0.00  |4.79    |4.00     |0.43       |
++------------------------------+------+--------+---------+-----------+
+|pycommons.lazy                |0.00  |4.79    |0.00     |9.83       |
++------------------------------+------+--------+---------+-----------+
+|pycommons.validate            |0.00  |4.79    |0.00     |1.92       |
++------------------------------+------+--------+---------+-----------+
+|pycommons.coercion            |0.00  |2.99    |0.00     |4.27       |
++------------------------------+------+--------+---------+-----------+
+|pycommons.statistical_logging |0.00  |2.40    |4.00     |10.47      |
++------------------------------+------+--------+---------+-----------+
+|pycommons.decorators          |0.00  |1.80    |8.00     |10.90      |
++------------------------------+------+--------+---------+-----------+
+|pycommons.date                |0.00  |1.80    |8.00     |4.06       |
++------------------------------+------+--------+---------+-----------+
+|pycommons.dict_comparator     |0.00  |1.80    |4.00     |0.43       |
++------------------------------+------+--------+---------+-----------+
+|pycommons.transform           |0.00  |1.80    |0.00     |2.35       |
++------------------------------+------+--------+---------+-----------+
+|pycommons.sync                |0.00  |1.20    |4.00     |0.85       |
++------------------------------+------+--------+---------+-----------+
+|pycommons.reflection          |0.00  |1.20    |0.00     |5.34       |
++------------------------------+------+--------+---------+-----------+
+|pycommons.version_providers   |0.00  |0.60    |16.00    |0.21       |
++------------------------------+------+--------+---------+-----------+
+|pycommons.errors              |0.00  |0.60    |0.00     |2.78       |
++------------------------------+------+--------+---------+-----------+
+|pycommons.termcolors          |0.00  |0.60    |0.00     |1.71       |
++------------------------------+------+--------+---------+-----------+
+|pycommons.test                |0.00  |0.60    |0.00     |1.28       |
++------------------------------+------+--------+---------+-----------+
+|pycommons.function            |0.00  |0.60    |0.00     |1.07       |
++------------------------------+------+--------+---------+-----------+
+
+
+
+Messages
+--------
+
++-----------+------------+
+|message id |occurrences |
++===========+============+
+|C0103      |164         |
++-----------+------------+
+|C0111      |144         |
++-----------+------------+
+|C0322      |90          |
++-----------+------------+
+|W0614      |41          |
++-----------+------------+
+|C0301      |31          |
++-----------+------------+
+|W0212      |25          |
++-----------+------------+
+|C0324      |24          |
++-----------+------------+
+|W0612      |16          |
++-----------+------------+
+|W0622      |14          |
++-----------+------------+
+|C0321      |14          |
++-----------+------------+
+|R0903      |11          |
++-----------+------------+
+|W0511      |8           |
++-----------+------------+
+|W0142      |8           |
++-----------+------------+
+|W0703      |7           |
++-----------+------------+
+|W0201      |7           |
++-----------+------------+
+|E1101      |7           |
++-----------+------------+
+|W0613      |6           |
++-----------+------------+
+|R0201      |6           |
++-----------+------------+
+|W0702      |5           |
++-----------+------------+
+|W0231      |5           |
++-----------+------------+
+|W0102      |5           |
++-----------+------------+
+|W0311      |4           |
++-----------+------------+
+|W0611      |3           |
++-----------+------------+
+|W0141      |3           |
++-----------+------------+
+|W0621      |2           |
++-----------+------------+
+|W0404      |2           |
++-----------+------------+
+|W0221      |2           |
++-----------+------------+
+|W0105      |2           |
++-----------+------------+
+|R0913      |2           |
++-----------+------------+
+|R0912      |2           |
++-----------+------------+
+|R0904      |2           |
++-----------+------------+
+|W0403      |1           |
++-----------+------------+
+|W0401      |1           |
++-----------+------------+
+|R0922      |1           |
++-----------+------------+
+|R0921      |1           |
++-----------+------------+
+|E0611      |1           |
++-----------+------------+
+|E0202      |1           |
++-----------+------------+
+|C0323      |1           |
++-----------+------------+
+
+
+
+Global evaluation
+-----------------
+Your code has been rated at 5.57/10 (previous run: 5.57/10)
+
+Statistics by type
+------------------
+
++---------+-------+-----------+-----------+------------+---------+
+|type     |number |old number |difference |%documented |%badname |
++=========+=======+===========+===========+============+=========+
+|module   |29     |29         |=          |37.93       |0.00     |
++---------+-------+-----------+-----------+------------+---------+
+|class    |35     |35         |=          |51.43       |8.57     |
++---------+-------+-----------+-----------+------------+---------+
+|method   |178    |178        |=          |61.24       |6.18     |
++---------+-------+-----------+-----------+------------+---------+
+|function |89     |89         |=          |55.06       |23.60    |
++---------+-------+-----------+-----------+------------+---------+
+
+
+
+Duplication
+-----------
+
++-------------------------+------+---------+-----------+
+|                         |now   |previous |difference |
++=========================+======+=========+===========+
+|nb duplicated lines      |0     |0        |=          |
++-------------------------+------+---------+-----------+
+|percent duplicated lines |0.000 |0.000    |=          |
++-------------------------+------+---------+-----------+
+
+
+

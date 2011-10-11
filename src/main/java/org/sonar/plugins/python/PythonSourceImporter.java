@@ -23,24 +23,29 @@ package org.sonar.plugins.python;
 import java.io.File;
 import java.util.List;
 
+import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.sonar.api.batch.AbstractSourceImporter;
-import org.sonar.api.resources.Resource;
-import org.sonar.plugins.python.cobertura.PythonCoberturaSensor;
 
 public class PythonSourceImporter extends AbstractSourceImporter {
 
-  public PythonSourceImporter(Python python) {
-    super(python);
-  }
+	private static Logger logger = LoggerFactory.getLogger(PythonSourceImporter.class);
 
-  @Override
-  protected Resource createResource(File file, List<File> sourceDirs, boolean unitTest) {
-    return file != null ? PythonFile.fromIOFile(file, sourceDirs, unitTest) : null;
-  }
+	public PythonSourceImporter(Python python) {
+		super(python);
+	}
 
-  @Override
-  public String toString() {
-    return getClass().getSimpleName();
-  }
+	@Override
+	protected PythonFile createResource(File file, List<File> sourceDirs, boolean unitTest) {
+		if( file == null )
+			return null;
+		PythonFile answer = PythonFile.fromIOFile(file, sourceDirs, unitTest);
+		logger.debug(String.format("Importing file %s", answer));
+		return answer;
+	}
+
+	@Override
+	public String toString() {
+		return getClass().getSimpleName();
+	}
 }
