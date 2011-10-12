@@ -21,16 +21,12 @@ package org.sonar.plugins.python.nose;
 
 import java.io.File;
 
-import org.apache.commons.lang.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.sonar.api.batch.Sensor;
 import org.sonar.api.batch.SensorContext;
 import org.sonar.api.resources.Project;
-import org.sonar.api.resources.Resource;
 import org.sonar.plugins.python.Python;
-import org.sonar.plugins.python.PythonFile;
-import org.sonar.plugins.surefire.api.AbstractSurefireParser;
 
 public class NoseSensor implements Sensor {
 

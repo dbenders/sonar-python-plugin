@@ -53,9 +53,9 @@ public abstract class NoseParser {
 
 	private void sanitize(UnitTestIndex index) {
 		for (String classname : index.getClassnames()) {
-			if (StringUtils.contains(classname, "$")) {
+			if (StringUtils.contains(classname, ".")) {
 				// Surefire reports classes whereas sonar supports files
-				String parentClassName = StringUtils.substringBeforeLast(classname, "$");
+				String parentClassName = StringUtils.substringBeforeLast(classname, ".");
 				index.merge(classname, parentClassName);
 			}
 		}

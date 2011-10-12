@@ -27,7 +27,7 @@ import org.sonar.api.Extension;
 import org.sonar.api.Plugin;
 import org.sonar.api.Properties;
 import org.sonar.api.Property;
-import org.sonar.plugins.python.cobertura.PythonCoberturaSensor;
+import org.sonar.plugins.python.cobertura.CoverageSensor;
 import org.sonar.plugins.python.nose.NoseSensor;
 import org.sonar.plugins.python.pylint.PyLintRuleManager;
 import org.sonar.plugins.python.pylint.PyLintSensor;
@@ -75,7 +75,7 @@ public class PythonPlugin implements Plugin {
     
 		list.add(NoseSensor.class);
 
-		//list.add(PythonCoberturaSensor.class);
+		list.add(CoverageSensor.class);
     
 		return list;
 	}
